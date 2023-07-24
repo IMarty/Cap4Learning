@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="aXUvIxO" resname="News">
+        <source>News</source>
+        <target>Actualités</target>
+      </trans-unit>
+      <trans-unit id="EhVukhv" resname="Id">
+        <source>Id</source>
+        <target>Id</target>
+      </trans-unit>
+      <trans-unit id="fozSBW2" resname="Title">
+        <source>Title</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id="41yOT1y" resname="Updated At">
+        <source>Updated At</source>
+        <target>Mis-à-jour le</target>
+      </trans-unit>
+      <trans-unit id="PUQzcBC" resname="Created At">
+        <source>Created At</source>
+        <target>Créé le</target>
+      </trans-unit>
+      <trans-unit id="JmpBuQ1" resname="Translations">
+        <source>Translations</source>
+        <target>Traductions</target>
+      </trans-unit>
+      <trans-unit id="mhxU9V5" resname="Picture">
+        <source>Picture</source>
+        <target>Image</target>
+      </trans-unit>
+      <trans-unit id="6z1Ylg8" resname="Linked Training">
+        <source>Linked Training</source>
+        <target>Formation lié</target>
+      </trans-unit>
+      <trans-unit id="LvQuwh2" resname="Published">
+        <source>Published</source>
+        <target>Publié</target>
+      </trans-unit>
+      <trans-unit id="ac_uhth" resname="News List">
+        <source>News List</source>
+        <target>Liste des news</target>
+      </trans-unit>
+      <trans-unit id="xZy_mGr" resname="News Create">
+        <source>News Create</source>
+        <target>Créer une news</target>
+      </trans-unit>
+      <trans-unit id="CjCoFdZ" resname="Page">
+        <source>Page</source>
+        <target>Page</target>
+      </trans-unit>
+      <trans-unit id="3JQKOOP" resname="Short Description">
+        <source>Short Description</source>
+        <target>Description courte</target>
+      </trans-unit>
+      <trans-unit id="soj9D.7" resname="Linked News">
+        <source>Linked News</source>
+        <target>Actualité liée</target>
+      </trans-unit>
+      <trans-unit id="ma9mBv_" resname="Menu">
+        <source>Menu</source>
+        <target>Menu</target>
+      </trans-unit>
+      <trans-unit id="0u916Gu" resname="Paragraphs">
+        <source>Paragraphs</source>
+        <target>Paragraphes</target>
+      </trans-unit>
+      <trans-unit id="33sRnS3" resname="Page List">
+        <source>Page List</source>
+        <target>Liste des pages</target>
+      </trans-unit>
+      <trans-unit id="KiC6aWE" resname="Page Create">
+        <source>Page Create</source>
+        <target>Créer une page</target>
+      </trans-unit>
+      <trans-unit id="NqeY4.O" resname="Training">
+        <source>Training</source>
+        <target>Formation</target>
+      </trans-unit>
+      <trans-unit id="KSwG8AR" resname="Category">
+        <source>Category</source>
+        <target>Catégorie</target>
+      </trans-unit>
+      <trans-unit id="UACc4dp" resname="File">
+        <source>File</source>
+        <target>Fichier pdf</target>
+      </trans-unit>
+      <trans-unit id="0u2umbM" resname="Price Inter">
+        <source>Price Inter</source>
+        <target>Prix Inter</target>
+      </trans-unit>
+      <trans-unit id="D8lH5Mf" resname="Price Intra">
+        <source>Price Intra</source>
+        <target>Prix Intra</target>
+      </trans-unit>
+      <trans-unit id="B4p5cFT" resname="Next Date">
+        <source>Next Date</source>
+        <target>Prochaine date</target>
+      </trans-unit>
+      <trans-unit id="yzWtrVC" resname="Training List">
+        <source>Training List</source>
+        <target>Liste des formations</target>
+      </trans-unit>
+      <trans-unit id="HK5eBga" resname="Training Create">
+        <source>Training Create</source>
+        <target>Créer une formation</target>
+      </trans-unit>
+      <trans-unit id="dbLQcYw" resname="Training Category">
+        <source>Training Category</source>
+        <target>Catégorie de formation</target>
+      </trans-unit>
+      <trans-unit id="X3lT98m" resname="Parent">
+        <source>Parent</source>
+        <target>Catégorie parente</target>
+      </trans-unit>
+      <trans-unit id="0VOH7Mb" resname="Slug">
+        <source>Slug</source>
+        <target>Slug</target>
+      </trans-unit>
+      <trans-unit id="Um4Ah8w" resname="Description">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="GeOgIuB" resname="Training Category List">
+        <source>Training Category List</source>
+        <target>Liste des catégories de formation</target>
+      </trans-unit>
+      <trans-unit id=".JDKZtn" resname="Training Category Create">
+        <source>Training Category Create</source>
+        <target>Créer une catégorie de formation</target>
+      </trans-unit>
+      <trans-unit id="w7A90oW" resname="Paragraph">
+        <source>Paragraph</source>
+        <target>Paragraphe</target>
+      </trans-unit>
+      <trans-unit id="iIH8iaH" resname="Disposition">
+        <source>Disposition</source>
+        <target>Disposition</target>
+      </trans-unit>
+      <trans-unit id="01cXXP6" resname="Media">
+        <source>Media</source>
+        <target>Image</target>
+      </trans-unit>
+      <trans-unit id="j7iJGgQ" resname="Paragraph List">
+        <source>Paragraph List</source>
+        <target>Liste des paragraphs</target>
+      </trans-unit>
+      <trans-unit id="uYOTXas" resname="Paragraph Create">
+        <source>Paragraph Create</source>
+        <target>Créer un paragraph</target>
+      </trans-unit>
+      <trans-unit id="8UgiSuR" resname="Module">
+        <source>Module</source>
+        <target>Module</target>
+      </trans-unit>
+      <trans-unit id="UEJ4QXH" resname="Module List">
+        <source>Module List</source>
+        <target>Liste des modules</target>
+      </trans-unit>
+      <trans-unit id="rNNwgq9" resname="Module Create">
+        <source>Module Create</source>
+        <target>Créer un module</target>
+      </trans-unit>
+      <trans-unit id="LGsuJTw" resname="Your name">
+        <source>Your name</source>
+        <target>Votre nom</target>
+      </trans-unit>
+      <trans-unit id="M.6VzgI" resname="Your email">
+        <source>Your email</source>
+        <target>Votre email</target>
+      </trans-unit>
+      <trans-unit id="egV72Za" resname="Your message">
+        <source>Your message</source>
+        <target>Votre message</target>
+      </trans-unit>
+      <trans-unit id="1yrnJS_" resname="I agree to &lt;a href=&quot;#&quot;&gt;terms &amp; conditions&lt;/a&gt;">
+        <source>I agree to &lt;a href="#"&gt;terms &amp; conditions&lt;/a&gt;</source>
+        <target><![CDATA[J'accepte les <a href="/conditions-generales-de-vente">conditions générales</a>]]></target>
+      </trans-unit>
+      <trans-unit id="ScJmuqq" resname="Search">
+        <source>Search</source>
+        <target>Recherche</target>
+      </trans-unit>
+      <trans-unit id="ClWcSQx" resname="CPF eligible classes only">
+        <source>CPF eligible classes only</source>
+        <target>seulement les formations éligibles au CPF</target>
+      </trans-unit>
+      <trans-unit id="XvXvA2S" resname="_all">
+        <source>all</source>
+        <target>toutes</target>
+      </trans-unit>
+      <trans-unit id="sLE_ZdY" resname="search.default">
+        <source>search.default</source>
+        <target>toutes</target>
+      </trans-unit>
+      <trans-unit id="AVsgFaH" resname="We are training experts">
+        <source>We are training experts</source>
+        <target>Nous sommes experts en formation</target>
+      </trans-unit>
+      <trans-unit id="LKI9Ip4" resname="We help people in developing their careers and skills.">
+        <source>We help people in developing their careers and skills.</source>
+        <target>Nous aidons nos clients à développer leur carrière et leurs compétences.</target>
+      </trans-unit>
+      <trans-unit id="b3xlDIA" resname="Find!">
+        <source>Find!</source>
+        <target>Trouver!</target>
+      </trans-unit>
+      <trans-unit id="iO0HP7f" resname="Our featured &lt;br&gt;training programs :">
+        <source>Our featured &lt;br&gt;training programs :</source>
+        <target>Nos formations à la une:</target>
+      </trans-unit>
+      <trans-unit id="yMYCMw4" resname="Discover our &lt;br&gt; full catalog">
+        <source>Discover our &lt;br&gt; full catalog</source>
+        <target><![CDATA[Consulter le <br> catalogue complet]]></target>
+      </trans-unit>
+      <trans-unit id="g7eUFFw" resname="Read more">
+        <source>Read more</source>
+        <target>En savoir plus</target>
+      </trans-unit>
+      <trans-unit id="pSrOQg8" resname="All">
+        <source>All</source>
+        <target>Toutes</target>
+      </trans-unit>
+      <trans-unit id="tJLdSue" resname="Reach your professional goals now">
+        <source>Reach your professional goals now</source>
+        <target>Atteindre vos objectifs professionnels</target>
+      </trans-unit>
+      <trans-unit id="5dSYdg_" resname="with Cap4 Learning’s specific educational paths, you’re aiming for excellence.Cras mattis consectetur purus sit amet fermentum.">
+        <source>with Cap4 Learning’s specific educational paths, you’re aiming for excellence.Cras mattis consectetur purus sit amet fermentum.</source>
+        <target>Visez l'excellence grâce à nos parcours de formation dédiés</target>
+      </trans-unit>
+      <trans-unit id="yTh.tmA" resname="What we offer&lt;span class=&quot;text-secondary&quot;&gt;.&lt;/span&gt; + how we make it happen&lt;span class=&quot;text-white&quot;&gt;.&lt;/span&gt;">
+        <source>What we offer&lt;span class="text-secondary"&gt;.&lt;/span&gt; + how we make it happen&lt;span class="text-white"&gt;.&lt;/span&gt;</source>
+        <target><![CDATA[Ce que nous proposons<span class="text-secondary">.</span> <br>+ ce que nous réalisons<span class="text-white">.</span>]]></target>
+      </trans-unit>
+      <trans-unit id="Ej7iCMi" resname="vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum.">
+        <source>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum.</source>
+        <target>Qu'elles soient en inter- ou intra-entreprise, toutes nos formations sont basées sur des scenarios pédagogiques développés avec la plus grande attention. Les contenus de formations sont revus et mis à jour régulièrement pour en assurer la meilleure pertinence.</target>
+      </trans-unit>
+      <trans-unit id="OJ.fYqm" resname="Innovation">
+        <source>Innovation</source>
+        <target>Innovation</target>
+      </trans-unit>
+      <trans-unit id="fZ63rLE" resname="Close">
+        <source>Close</source>
+        <target>Fermer</target>
+      </trans-unit>
+      <trans-unit id="urN9Ykc" resname="See more">
+        <source>See more</source>
+        <target>En savoir plus</target>
+      </trans-unit>
+      <trans-unit id="vicjaWs" resname="Develop skills">
+        <source>Develop skills</source>
+        <target>Développez vos compétences</target>
+      </trans-unit>
+      <trans-unit id=".KOWTs4" resname="Learn future proof Job">
+        <source>Learn future proof Job</source>
+        <target><![CDATA[Apprendre un <br>nouveau métier porteur]]></target>
+      </trans-unit>
+      <trans-unit id="G3j0cTk" resname="Continuous training">
+        <source>Continuous training</source>
+        <target>Formation continue</target>
+      </trans-unit>
+      <trans-unit id="HU2fg8I" resname="Take advantage of our trainers experience">
+        <source>Take advantage of our trainers experience</source>
+        <target>Profitez de l'expérience de nos formateurs</target>
+      </trans-unit>
+      <trans-unit id="tVe2Nae" resname="Take advantage of proven training engineering">
+        <source>Take advantage of proven training engineering</source>
+        <target>Une ingénierie pédagogique éprouvée</target>
+      </trans-unit>
+      <trans-unit id="TPA1nxk" resname="Our quality policy">
+        <source>Our quality policy</source>
+        <target>Notre contrôle qualité</target>
+      </trans-unit>
+      <trans-unit id="fR6b3FN" resname="Listen and advice">
+        <source>Listen and advice</source>
+        <target>Ecouter et conseiller</target>
+      </trans-unit>
+      <trans-unit id="HyksUAJ" resname="Don't miss out">
+        <source>Don't miss out</source>
+        <target>Rester informé</target>
+      </trans-unit>
+      <trans-unit id="RgIl_fj" resname="Sign up to our newsletter to stay in the Cap4 Learning loop">
+        <source>Sign up to our newsletter to stay in the Cap4 Learning loop</source>
+        <target>Inscrivez-vous à notre newsletter pour recevoir les actualités de Cap4 Learning.</target>
+      </trans-unit>
+      <trans-unit id="Or4zYRb" resname="Enter your e-mail address">
+        <source>Enter your e-mail address</source>
+        <target>votre adresse email</target>
+      </trans-unit>
+      <trans-unit id="dDRMEgM" resname="I agree to &lt;a href=&quot;&quot;&gt;terms &amp; conditions&lt;/a&gt;">
+        <source>I agree to &lt;a href=""&gt;terms &amp; conditions&lt;/a&gt;</source>
+        <target><![CDATA[J'accepte les <a href="/conditions-generales-de-vente">conditions générales</a>]]></target>
+      </trans-unit>
+      <trans-unit id="zA442px" resname="Subscribe">
+        <source>Subscribe</source>
+        <target>S'inscrire</target>
+      </trans-unit>
+      <trans-unit id="hRWaQBB" resname="Thank you !">
+        <source>Thank you !</source>
+        <target>Merci !</target>
+      </trans-unit>
+      <trans-unit id="trAwCKY" resname="You've been successfully registered to our newsletter">
+        <source>You've been successfully registered to our newsletter</source>
+        <target>Vous avez bien été inscrit à notre newsletter !</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="4N7wPka" resname="SEO Contact desc">
+        <source>SEO Contact desc</source>
+        <target>Vous souhaitez des informations détailllées sur nos formations API, MuleSoft, cybersécurité, RGPD, DPO ? Contactez-nous.</target>
+      </trans-unit>
+      <trans-unit id="auDcfcg" resname="Let's get in touch">
+        <source>Let's get in touch</source>
+        <target>Contactez-nous</target>
+      </trans-unit>
+      <trans-unit id="ClxTJMT" resname="Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue.">
+        <source>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue.</source>
+        <target>Vous avez une question spécifique, un projet ? Vous souhaitez créer un programme personnalisé ? Vous voulez prendre rendez-vous avec un membre de l'équipe ? Laissez-nous un message et nous vous recontacterons au plus vite.</target>
+      </trans-unit>
+      <trans-unit id="ebn8lZ5" resname="© Cap4 Learning, a subsidiary of">
+        <source>© Cap4 Learning, a subsidiary of</source>
+        <target>© Cap4 Learning, une filiale de</target>
+      </trans-unit>
+      <trans-unit id="04oOQ4h" resname="A website &lt;a href=&quot;#&quot;&gt;Intrépide Studio&lt;/a&gt;">
+        <source>A website &lt;a href="#"&gt;Intrépide Studio&lt;/a&gt;</source>
+        <target><![CDATA[Un site <a href="https://www.intrepide.lu" target="_blank">Intrépide Studio</a>]]></target>
+      </trans-unit>
+      <trans-unit id="3CjQ0w0" resname="All courses">
+        <source>All courses</source>
+        <target>Toutes les formations</target>
+      </trans-unit>
+      <trans-unit id="PACF6TZ" resname="SEO Basic description">
+        <source>SEO Basic description</source>
+        <target>Toutes nos formations : protection des données, conformité RGPD, API, MuleSoft. Nouveau catalogue 2021.</target>
+      </trans-unit>
+      <trans-unit id="ai0ez9_" resname="Our course catalog">
+        <source>Our course catalog</source>
+        <target>Nos formations</target>
+      </trans-unit>
+      <trans-unit id="UwlfXQL" resname="Lead vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum.">
+        <source>Lead vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum.</source>
+        <target>Trouvez les formations qui correspondent à ce que vous recherchez.</target>
+      </trans-unit>
+      <trans-unit id="kyklG2m" resname="All classes">
+        <source>All classes</source>
+        <target>Toutes les formations</target>
+      </trans-unit>
+      <trans-unit id="Szn3Cqh" resname="No results found for your search.">
+        <source>No results found for your search.</source>
+        <target>Aucun résultat trouvé pour votre recherche.</target>
+      </trans-unit>
+      <trans-unit id="GP3VSbL" resname="New">
+        <source>New</source>
+        <target>Nouveau</target>
+      </trans-unit>
+      <trans-unit id="MNQ2wng" resname="CPF">
+        <source>CPF</source>
+        <target>CPF</target>
+      </trans-unit>
+      <trans-unit id="Fu0Wfny" resname="day(s)">
+        <source>day(s)</source>
+        <target>jours</target>
+      </trans-unit>
+      <trans-unit id="E0Jk36v" resname="hour(s)">
+        <source>hour(s)</source>
+        <target>heures</target>
+      </trans-unit>
+      <trans-unit id="tTs1Fj9" resname="Next session">
+        <source>Next session</source>
+        <target>Prochaine session</target>
+      </trans-unit>
+      <trans-unit id="l8w63Ft" resname="Covered skills">
+        <source>Covered skills</source>
+        <target>Compétences visées</target>
+      </trans-unit>
+      <trans-unit id="hlUUaC0" resname="Prerequisites">
+        <source>Prerequisites</source>
+        <target>Prérequis</target>
+      </trans-unit>
+      <trans-unit id="RZid5J_" resname="Details">
+        <source>Details</source>
+        <target>Détails</target>
+      </trans-unit>
+      <trans-unit id="JGAbyq5" resname="Intro">
+        <source>Intro</source>
+        <target>Intro</target>
+      </trans-unit>
+      <trans-unit id="EWzTmCq" resname="Goals">
+        <source>Goals</source>
+        <target>Objectifs pédagogiques</target>
+      </trans-unit>
+      <trans-unit id="kJINk_L" resname="Program">
+        <source>Program</source>
+        <target>Programme</target>
+      </trans-unit>
+      <trans-unit id="TRi2fpx" resname="Educational goals">
+        <source>Educational goals</source>
+        <target>Objectifs pédagogiques</target>
+      </trans-unit>
+      <trans-unit id="VFwCNXa" resname="Audience">
+        <source>Audience</source>
+        <target>Public</target>
+      </trans-unit>
+      <trans-unit id="2_KCUi2" resname="&lt;a href=&quot;#contact&quot;&gt;Contact us&lt;/a&gt; for an &lt;br&gt; intra-communautary quote">
+        <source>&lt;a href="#contact"&gt;Contact us&lt;/a&gt; for an &lt;br&gt; intra-communautary quote</source>
+        <target><![CDATA[<a href="#footer" class="js-select-change" data-select-id="contact_type" data-select-option="contact_intra_information">Demande de devis</a> pour une formation en intra]]></target>
+      </trans-unit>
+      <trans-unit id="QzNmIOH" resname="Info Sheet">
+        <source>Info Sheet</source>
+        <target>Télécharger la fiche descriptive</target>
+      </trans-unit>
+      <trans-unit id="hdgQq2Z" resname="Educational &lt;br&gt; Methods">
+        <source>Educational &lt;br&gt; Methods</source>
+        <target>Méthodes de formation</target>
+      </trans-unit>
+      <trans-unit id="LMXch7L" resname="Achievement &lt;br&gt;methods">
+        <source>Achievement &lt;br&gt;methods</source>
+        <target>Validation des acquis</target>
+      </trans-unit>
+      <trans-unit id="nwhe6VH" resname="Trainer">
+        <source>Trainer</source>
+        <target>Formateur</target>
+      </trans-unit>
+      <trans-unit id="KsykdV7" resname="Request &lt;br&gt;more informations">
+        <source>Request &lt;br&gt;more informations</source>
+        <target>Vous souhaitez avoir plus détails sur cette formation...</target>
+      </trans-unit>
+      <trans-unit id="Auafm85" resname="Search our &lt;br&gt;programs">
+        <source>Search our &lt;br&gt;programs</source>
+        <target>Que cherchez-vous ?</target>
+      </trans-unit>
+      <trans-unit id="NSXSRPR" resname="and discover today how we will help you">
+        <source>and discover today how we will help you</source>
+        <target>Une actualité, une compétence, une formation... Dites-nous comment nous pouvons vous renseigner.</target>
+      </trans-unit>
+      <trans-unit id="R54EOMq" resname="What do you want to learn today ?">
+        <source>What do you want to learn today ?</source>
+        <target>Que voulez-vous apprendre aujourd'hui ?</target>
+      </trans-unit>
+      <trans-unit id="pXsIpIC" resname="Previous">
+        <source>Previous</source>
+        <target>Précedent</target>
+      </trans-unit>
+      <trans-unit id="H.V6Kdf" resname="Next">
+        <source>Next</source>
+        <target>Suivant</target>
+      </trans-unit>
+      <trans-unit id="yHMKYtQ" resname="SEO News listing description">
+        <source>SEO News listing description</source>
+        <target>News, évènements, publications. Retrouvez toute l'actualité sur le RGPD, les DPO, la cybersécurité, les API, MuleSoft dans notre fil. Abonnez-vous à notre newsletter.</target>
+      </trans-unit>
+      <trans-unit id="MeUMZrT" resname="Our latest&lt;br&gt; news">
+        <source>Our latest&lt;br&gt; news</source>
+        <target>Nos dernières actualités</target>
+      </trans-unit>
+      <trans-unit id="lxcHzms" resname="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.">
+        <source>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</source>
+        <target>Un évènement, une nouvelle importante ? Retrouvez ici les dernières information de votre organisme de formation.</target>
+      </trans-unit>
+      <trans-unit id="exruMtH" resname="innovation.desc">
+        <source>L’amélioration du développement des compétences opérationnelles est au cœur de notre métier. Nous veillons à anticiper les besoins de formation, à ajuster notre offre aux demandes les plus pointues des entreprises et à intégrer le meilleur des innovations pédagogiques.</source>
+        <target>Le développement des compétences opérationnelles est au coeur de notre métier. Nous veillons à anticiper les besoins de nos clients, à ajuster le contenu de nos formations pour satisfaire aux demandes les plus pointues des entreprises et à intégrer le meilleur des innovations pédagogiques.</target>
+      </trans-unit>
+      <trans-unit id="fMSZ5zT" resname="develop.desc">
+        <source>Toutes nos démarches et nos méthodes pédagogiques telles que le e-learning, le blended learning, mooc, e-tutorat, vidéos et le présentiel avec des formations inter-entreprises, intra-entreprise, séminaire, et le cours particulier ciblent le même objectif de vous amener à développer de nouvelles compétences au sein de votre fonction et de votre métier. Nous analysons vos objectifs professionnels afin de concevoir un parcours pédagogique en adéquation avec les compétences visées.</source>
+        <target>Nous utilisons les méthodes les plus adaptées aux compétences visées par nos formations. e-learning, blended learning, tutorat, vidéo, présentiel, séminaire... la méthode est toujours au service du contenu. C'est en étudiant les objectifs professionnels que nous concevons des parcours pédagogiques parfaitement adaptés aux métiers porteurs auquels nous préparons les apprenants.</target>
+      </trans-unit>
+      <trans-unit id="tiJ2cLt" resname="learn.future.desc">
+        <source>Les besoins des entreprises en termes de ressources IT sont de plus en plus importants. Par conséquent, les profils d’expert IT, au sens large, et les métiers du numérique deviennent incontournables dans le monde de l'entreprise. Nos formations vous permettent d’obtenir le socle de savoirs pour devenir de futurs experts</source>
+        <target>Les besoins des entreprises en termes de ressources IT sont de plus en plus importants. Par conséquent, les profils d’expert IT, au sens large, et les métiers du numérique deviennent incontournables dans le monde de l'entreprise. Nos formations vous permettent d’obtenir le socle de savoirs pour devenir de futurs experts</target>
+      </trans-unit>
+      <trans-unit id="Bz19SNy" resname="continuous.training.desc">
+        <source>Nous permettons la mise à jour des savoirs et des compétences de nos formateurs via des formations qui soit leur sont dédiés (formation de formateur par exemple), soit en intégrant des formations inter-entreprises ou encore par des comptes de formations e-learning. Nous pensons que plus nos formateurs sont formés, plus ils se sont efficients, peu importe la formation.</source>
+        <target>Le maintien des compétences des formateurs est un ingrédient essentiel d'une formation de qualité. En plus de bénéficier d'une expérience terrain et d'un niveau d'expertise démontrable (certifications...) tous nos formateurs continuent à se former continuellement, tant sur leurs domaines d'intervention qu'aux méthodes pédagogiques qu'ils utilisent.</target>
+      </trans-unit>
+      <trans-unit id="oY7YTcn" resname="trainer.experience.desc">
+        <source>Nos formateurs sont autant pédagogues qu’experts dans leurs domaines d’intervention. Nous accompagnons les stagiaires dans la mise en œuvre de leurs acquis et nous proposons notre savoir- faire pour obtenir des résultats tout au long de leur carrière sous la forme de nouvelles compétences. La formation, c’est notre métier.</source>
+        <target>Nos formateurs sont autant pédagogues qu’experts dans leurs domaines d’intervention. Nous accompagnons les stagiaires dans la mise en œuvre de leurs acquis et nous proposons notre savoir- faire pour obtenir des résultats tout au long de leur carrière sous la forme de nouvelles compétences. La formation, c’est notre métier.</target>
+      </trans-unit>
+      <trans-unit id="47DEQpj" resname="">
+        <source></source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="phGsn_a" resname="quality.policy.desc">
+        <source>La qualité est au coeur de toutes nos actions. Nous mettons en oeuvre tous les contrôles nécessaires à assurer que le contenu des formations est toujours en adéquation avec les objectifs de qualification proposé et les besoins de nos stagiaires</source>
+        <target>La qualité est au coeur de toutes nos actions. Nous mettons en oeuvre tous les contrôles nécessaires à assurer que le contenu des formations est toujours en adéquation avec les objectifs pédagogiques proposés et les besoins de nos stagiaires</target>
+      </trans-unit>
+      <trans-unit id="qDBS7kj" resname="listen.advice.desc">
+        <source>La formation est avant tout un affaire de femmes et d'hommes. A toutes les étapes du processus pédagogique, nous sommes à l'écoute et intervenons pour aider nos clients à mettre en oeuvre leur plan de formation, orienter les stagiaires, les accompagner dans le développement de leurs compétences et évaluer les bénéfices de nos actions dans le cadre de leurs projets pédagogiques.</source>
+        <target>La formation est avant tout un affaire de femmes et d'hommes. A toutes les étapes du processus pédagogique, nous sommes à l'écoute et intervenons pour aider nos clients à mettre en oeuvre leur plan de formation, orienter les stagiaires, les accompagner dans le développement de leurs compétences et évaluer les bénéfices de nos actions dans le cadre de leurs projets pédagogiques.</target>
+      </trans-unit>
+      <trans-unit id="94PjL_." resname="test.123">
+        <source>test.123</source>
+        <target>test.123</target>
+      </trans-unit>
+      <trans-unit id="i0ftT6w" resname="Info-sheet">
+        <source>Info-sheet</source>
+        <target>Fiche descriptive</target>
+      </trans-unit>
+      <trans-unit id="0O3PtHp" resname="You received a new message from Cap4Learning website !">
+        <source>You received a new message from Cap4Learning website !</source>
+        <target>Vous avez reçu un nouveau message du site Cap4Learning!</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="3NHVIj9" resname="Name">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="L3dmip3" resname="Message">
+        <source>Message</source>
+        <target>Message</target>
+      </trans-unit>
+      <trans-unit id="j66M34E" resname="training.engineering.desc">
+        <source>CAP4 LEARNING possède une ingénierie pédagogique éprouvée basée sur des scénarios pédagogiques pour toutes les formations réalisées qu’elles soient en inter ou en intra entreprises. Au moins une fois par an, les contenus de formations inter-entreprises sont examinés et peuvent parfois faire l’objet de réingénierie pédagogique si nécessaire.</source>
+        <target>CAP4 LEARNING possède une ingénierie pédagogique éprouvée basée sur des scénarios pédagogiques pour toutes les formations réalisées qu’elles soient en inter ou en intra entreprises. Au moins une fois par an, les contenus de formations inter-entreprises sont examinés et peuvent parfois faire l’objet de réingénierie pédagogique si nécessaire.</target>
+      </trans-unit>
+      <trans-unit id="El7RLK4" resname="Browse our catalog by category">
+        <source>Browse our catalog by category</source>
+        <target>Nos formations par catégorie</target>
+      </trans-unit>
+      <trans-unit id="jbUZL1o" resname="Tailor-made training">
+        <source>Tailor-made training</source>
+        <target>Formation sur mesure</target>
+      </trans-unit>
+      <trans-unit id="UwtEmYf" resname="SEO Tailor-made training desc">
+        <source>SEO Tailor-made training desc</source>
+        <target>Vous avez un besoin spécifique de formation API, MuleSoft, cybersécurtié, DPO, RGPD, protections des données ? Prenez contact.</target>
+      </trans-unit>
+      <trans-unit id="YFow7Fh" resname="Tailor-made training desc">
+        <source>Tailor-made training desc</source>
+        <target>"Vous avez une question, un projet ? Vous souhaitez créer un programme de formation personnalisé ? Vous voulez prendre rendez-vous avec un membre de l'équipe ? Laissez-nous un message et nous vous recontacterons au plus vite."</target>
+      </trans-unit>
+      <trans-unit id="wfQ9NUx" resname="Send!">
+        <source>Send!</source>
+        <target>Envoyer!</target>
+      </trans-unit>
+      <trans-unit id="LcdCI3r" resname="Directrice Pédagogique &amp; Associée">
+        <source>Directrice Pédagogique &amp; Associée</source>
+        <target><![CDATA[Directrice Pédagogique & Associée]]></target>
+      </trans-unit>
+      <trans-unit id="HyLHRkv" resname="Profil Linkedin">
+        <source>Profil Linkedin</source>
+        <target>Profil Linkedin</target>
+      </trans-unit>
+      <trans-unit id="1SxLwho" resname="Directeur des Opérations &amp; Associé">
+        <source>Directeur des Opérations &amp; Associé</source>
+        <target><![CDATA[Directeur des Opérations & Associé]]></target>
+      </trans-unit>
+      <trans-unit id="R3_3z1I" resname="Page de conversion">
+        <source>Page de conversion</source>
+        <target>Page de conversion</target>
+      </trans-unit>
+      <trans-unit id="hJl0uv9" resname="with Cap4 Learning’s specific educational paths, you’re aiming for excellence.">
+        <source>with Cap4 Learning’s specific educational paths, you’re aiming for excellence.</source>
+        <target>Visez l'excellence grâce à nos parcours de formation dédiés.</target>
+      </trans-unit>
+      <trans-unit id="nHxNo.D" resname="Tailor-made">
+        <source>Tailor-made</source>
+        <target>Sur-mesure</target>
+      </trans-unit>
+      <trans-unit id="k0oxHNB" resname="The page you are looking for does not exist (yet) why not try a search?">
+        <source>The page you are looking for does not exist (yet) why not try a search?</source>
+        <target>La page que vous recherchez n’existe pas (encore) pourquoi ne pas essayer une recherche ?</target>
+      </trans-unit>
+      <trans-unit id="OSjPIdf" resname="Inter Price">
+        <source>Inter Price</source>
+        <target>Prix Inter</target>
+      </trans-unit>
+      <trans-unit id="KsNOzZz" resname="resetting.reset.submit">
+        <source>resetting.reset.submit</source>
+        <target>Réinitialiser</target>
+      </trans-unit>
+      <trans-unit id="leUiZoH" resname="You requested a new password !">
+        <source>You requested a new password !</source>
+        <target>Réinitialisation de votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="7AeVFFP" resname="We received a new request to reset your user password. Click on the link below">
+        <source>We received a new request to reset your user password. Click on the link below</source>
+        <target>Nous avons reçu une demande de réinitialisation de mot passe. Cliquez sur le lien ci-dessous</target>
+      </trans-unit>
+      <trans-unit id="l9ovXAY" resname="Reinitialize password">
+        <source>Reinitialize password</source>
+        <target>Réinitialiser mon mot de passe</target>
+      </trans-unit>
+      <trans-unit id="njOR6b8" resname="Homepage">
+        <source>Homepage</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="qq2dkua" resname="Courses">
+        <source>Courses</source>
+        <target>Formations</target>
+      </trans-unit>
+      <trans-unit id="QtLyZt." resname="Choose a category">
+        <source>Choose a category</source>
+        <target>Choisissez une catégorie</target>
+      </trans-unit>
+      <trans-unit id="Yix3Nsx" resname="Tailor-made training SEO">
+        <source>Tailor-made training SEO</source>
+        <target>Formation sur mesure</target>
+      </trans-unit>
+      <trans-unit id="hdn7fJg" resname="Contact SEO">
+        <source>Contact SEO</source>
+        <target>Contacter Cap4 Learning, experts des formations au numérique</target>
+      </trans-unit>
+      <trans-unit id="wOPrjgj" resname="All courses SEO">
+        <source>All courses SEO</source>
+        <target>Le meilleur des formations au numérique.</target>
+      </trans-unit>
+      <trans-unit id="mMuaYNF" resname="News SEO">
+        <source>News SEO</source>
+        <target>Actualités de Cap4 Learning, organisme de formation expert du numérique, de la cybersécurité et de la protection des données.</target>
+      </trans-unit>
+      <trans-unit id="QEvZHGl" resname="Your email is only used to send you our newsletters. &lt;br&gt;You can use the unsubscribe link integrated in the newsletter at any time.">
+        <source>Your email is only used to send you our newsletters. &lt;br&gt;You can use the unsubscribe link integrated in the newsletter at any time.</source>
+        <target><![CDATA[Votre email est uniquement utilisé pour vous envoyer nos newsletters. <br>Vous pouvez à tout moment utiliser le lien de désabonnement intégré dans la newsletter.]]></target>
+      </trans-unit>
+      <trans-unit id="WY72Vq8" resname="contact.agree.label">
+        <source>contact.agree.label</source>
+        <target><![CDATA[Les informations recueillies à partir de ce formulaire sont transmises à notre service commercial pour répondre à votre demande citée en objet.<br><br> <a class="base-link" href="/vie-privee"><b>En savoir plus sur la gestion de vos données et vos droits.</b></a>]]></target>
+      </trans-unit>
+      <trans-unit id="5cmFlSn" resname="Type de contact">
+        <source>Type de contact</source>
+        <target>Type de contact</target>
+      </trans-unit>
+      <trans-unit id="iIosyu5" resname="Demande de devis">
+        <source>Demande de devis</source>
+        <target>Demande de devis</target>
+      </trans-unit>
+      <trans-unit id="J_sytdx" resname="Je veux en savoir plus sur cette formation">
+        <source>Je veux en savoir plus sur cette formation</source>
+        <target>Je veux en savoir plus sur cette formation</target>
+      </trans-unit>
+      <trans-unit id="4AiNiyx" resname="Je souhaite avoir des renseignements pour une formule intra">
+        <source>Je souhaite avoir des renseignements pour une formule intra</source>
+        <target>Je souhaite avoir des renseignements pour une formule intra</target>
+      </trans-unit>
+      <trans-unit id="6qIxgXj" resname="Autres">
+        <source>Autres</source>
+        <target>Autres</target>
+      </trans-unit>
+      <trans-unit id="cC074CV" resname="Your message has been successfully sent !">
+        <source>Your message has been successfully sent !</source>
+        <target>Votre message a bien été envoyé !</target>
+      </trans-unit>
+      <trans-unit id="A.BQDzZ" resname="Back to news">
+        <source>Back to news</source>
+        <target>Retourner aux actualités</target>
+      </trans-unit>
+      <trans-unit id="TAqbEuc" resname="I agree to terms &amp; conditions">
+        <source>I agree to terms &amp; conditions</source>
+        <target><![CDATA[__I agree to terms & conditions]]></target>
+      </trans-unit>
+      <trans-unit id="9VSEm_3" resname="Available in France and in Luxembourg">
+        <source>Available in France and in Luxembourg</source>
+        <target>Disponible en France et au Luxembourg</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

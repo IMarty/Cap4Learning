@@ -1,0 +1,27 @@
+<article class="news">
+    {% if news.picture %}
+    <div class="news__figure">
+        <img src="{% path news.picture, 'reference' %}" alt="Cap4Learning - {{ news.title }}">
+    </div>
+    {% endif %}
+
+    <div class="news__info">
+        <span class="news__date">
+            {{ news.createdAt | date ('d / m / y')}}
+        </span>
+        <h2 class="h4 news__title">
+            {{ news.title }}
+        </h2>
+        <div class="wysiwyg">
+            <p>
+                {{ news.shortDescription }}
+            </p>
+        </div>
+    </div>
+
+    <a href="{{ path('news_detail',{'slug': news.slug}) }}" class="stretched-link">
+        <span class="visually-hidden">
+            {{ 'See more' | trans }}
+        </span>
+    </a>
+</article>

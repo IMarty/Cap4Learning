@@ -1,0 +1,42 @@
+sonata_admin:
+    title: 'Cap4 Learning'
+    title_logo: static/img/logo-intrepide.svg
+    dashboard:
+        blocks:
+            - type: sonata.block.service.text
+              position: left
+              settings:
+                  content:
+                      <div class="text-center">
+                      <div style="padding: 50px; 0; margin-bottom: 20px; background: white; ">
+                      <img src="/static/img/logo-intrepide.svg" alt="intrepide studio" style="max-width: 150px; margin-bottom: 20px">
+                      <p>Welcome to cap4learning back-end <br>Support available by sending an e-mail to : <a href="mailto:dev@intrepide.lu">dev@intrepide.lu</a></p>
+                      <br>
+                      <br>
+                      <p><a href="/trans/update/grid">Go to translations</a>
+                      </div>
+                      </div>
+            - type: sonata.admin.block.admin_list
+              position: left
+        groups:
+            Content:
+                label: Contenu
+                items:
+                     - admin.news
+                     - admin.page
+                     - admin.training
+                     - admin.training_category
+                     - admin.contact
+                     - sonata.media.admin.media
+                roles: [ ROLE_ADMIN ]
+    options:
+        legacy_twig_text_extension: false
+    assets:
+        extra_javascripts:
+          - 'static/js/admin.js'
+
+
+sonata_block:
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]

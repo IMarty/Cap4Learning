@@ -1,0 +1,9 @@
+nucleos_user:
+  db_driver: orm # other valid values is 'mongodb'
+  firewall_name: main
+  user_class: App\Entity\NucleosUserBundle\User
+  from_email:   "%env(MAILER_SENDER)%"
+  resetting:
+    retry_ttl: 300 # Value in seconds, logic will use as hours
+  service:
+    mailer: 'App\Mailer\Mailer'

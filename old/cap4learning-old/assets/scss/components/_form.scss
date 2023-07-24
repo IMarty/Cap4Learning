@@ -1,0 +1,169 @@
+form {
+    .form-control {
+        &[type='text'],
+        &[type='password'],
+        {
+            border-radius: 2.5rem;
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: 1px;
+
+            &::placeholder {
+                color: $primary;
+            }
+        }
+
+    }
+
+    select {
+        border-radius: 2.5rem !important;
+    }
+
+    textarea {
+        &.form-control {
+            border-radius: 2.5rem;
+            min-height: 15rem;
+        }
+    }
+
+    .form-check {
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+
+        &-input {
+            min-width: 1.625rem;
+            width: 1.625rem;
+            height: 1.625rem;
+            min-height: 1.625rem;
+            border-radius: .375rem;
+            background-color: transparent;
+            border: 1px solid $white;
+            margin-top: 0;
+
+            &:checked {
+                border-radius: .375rem;
+                background-color: $secondary !important;
+                border: 1px solid $white;
+                background-image: none !important;
+            }
+        }
+
+        &-label {
+            display: flex;
+            align-items: start;
+            font-size: .75rem;
+            padding-left: .75rem;
+            position: relative;
+
+            a {
+                margin-left: .25rem;
+                position: relative;
+                text-decoration: none;
+
+                &:after {
+                    width: 100%;
+                    content: "";
+                    position: absolute;
+                    top: calc(100% - 2px);
+                    left: 0;
+                    height: 2px;
+                    background-color: $white;
+                    z-index: 5;
+                }
+            }
+
+            &:focus,
+            &:hover {
+                cursor: pointer;
+            }
+
+            @include media-breakpoint-down(sm){
+                font-size: .675rem
+            }
+        }
+    }
+
+    .form-group {
+        +.form-group {
+            margin-top: 1.5rem;
+        }
+
+        &.-spaced .form-check {
+            justify-content: space-between;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .form-control {
+            &[type='text'],
+            &[type='password'],
+            {
+                font-size: 1.125rem;
+            }
+        }
+
+        select {
+            font-size: 1.125rem !important;
+        }
+    }
+
+    &.-nl {
+        a {
+            color: $white;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            margin-left: .25rem;
+
+            &:after {
+                width: 100%;
+                content: "";
+                position: absolute;
+                top: calc(100% - 2px);
+                left: 0;
+                height: 2px;
+                background-color: $white;
+                transition: all .2s ease-in-out;
+                z-index: 5;
+            }
+        }
+
+        .form-check-label {
+            line-height: 2;
+        }
+
+        .form-control {
+            &[type='text'],
+            &[type='password'] {
+                background-color: transparent;
+                border-color: $white;
+                margin-bottom: .75rem;
+                color: $white;
+
+                &::placeholder {
+                    color: $white;
+                }
+            }
+        }
+
+
+        @include media-breakpoint-down(lg) {
+            .form-check {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.nucleos_user_resetting_reset {
+    .col-sm-2 {
+        width: 100%;
+    }
+
+    .btn-default {
+        @extend .btn-primary
+    }
+}

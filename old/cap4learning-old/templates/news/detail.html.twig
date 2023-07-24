@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{  news.title }}
+{% endblock %}
+
+{% block seoDesc %}
+    {{  news.shortdescription }}
+{% endblock %}
+
+{% block mainClass %}
+    js-menu-fixed
+{% endblock %}
+
+{% block seoImg %}
+    {% if news.picture is not null %}
+        {% set imgTmp %}{% path news.picture, 'share' %}{% endset %}
+        {% if imgTmp is not null %}
+            <meta property="og:image" content="{{ absolute_url(imgTmp) }}" />
+        {% endif %}
+    {% else %}
+        <meta property="og:image" content="{{ absolute_url(asset('static/img/sharing.jpg')) }}" />
+    {% endif %}
+{% endblock %}
+
+
+{% block body %}
+<div class="row justify-content-center">
+    <div class="col-10 col-md-6">
+        <div class="page-news">
+            <span class="news__date mb-0">
+                {{ news.createdAt | date ('d / m / y')}}
+            </span>
+            <h1 class="h2">
+                {{ news.title }}
+            </h1>
+            <div class="page-news__shortdesc wysiwyg -lead">
+                <p>
+                    {{ news.shortDescription }}
+                </p>
+            </div>
+
+            {% if news.picture %}
+            <div class="page-news__figure">
+                <img src="{% path news.picture, 'reference' %}" alt="Cap4Learning - {{ news.title }}">
+            </div>
+            {% endif %}
+            <div class="page-news__content wysiwyg">
+                {{ news.longDescription | raw }}
+            </div>
+
+            <hr class="hrwhite">
+
+            <div class="d-inline">
+                <a href="{{ path('news_listing') }}">{{ 'Back to news' | trans }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

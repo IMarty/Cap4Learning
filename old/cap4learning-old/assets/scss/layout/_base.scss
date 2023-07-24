@@ -1,0 +1,262 @@
+body {
+    font-size: 1.125rem;
+    overflow-x: hidden;
+
+    &.menu-open {
+        &:after {
+            position: fixed;
+            content: '';
+            top: 0;
+            left: 0;
+            z-index: 950;
+            background-color: $green;
+            opacity: 0.36;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+    }
+
+    @include media-breakpoint-up(xhd) {
+        font-size: 1.125rem;
+    }
+}
+
+.container-fluid {
+    max-width: 1640px;
+
+    &.-corner {
+        position: relative;
+        padding-bottom: 4rem;
+        overflow: hidden;
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: 1.25rem;
+            right: 1.25rem;
+            width: calc(100% - 2.5rem);
+            top: -1rem;
+            bottom: 0;
+            border: .75rem solid $white;
+            border-radius: 1.25rem;
+            z-index: -1;
+        }
+
+        .js-menu-fixed &{
+            .overflower.-top {
+                display: none;
+                position: fixed;
+                content: '';
+                left: 2.25rem;
+                right: 2.25rem;
+                width: calc(100% - 5rem);
+                top: 1rem;
+                height: 0.75rem;
+                background-color: $white;
+                z-index: 250;
+            }
+
+            &:before {
+                display: none;
+                position: fixed;
+                content: '';
+                left: 2.25rem;
+                right: 2.25rem;
+                width: calc(100% - 5rem);
+                top: 0;
+                height: 1rem;
+                background-color: $teal;
+                z-index: 250;
+            }
+        }
+    }
+
+    .corner-pb-0 & {
+        padding-bottom: 1.25rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &.-corner {
+            .js-menu-fixed &{
+                &:before {
+                    display: block;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 6.5rem;
+                }
+
+                .overflower.-top {
+                    display: block;
+                    left: 5rem;
+                    right: 5rem;
+                    width: calc(100% - 10rem);
+                    top: 6.5rem;
+                }
+            }
+
+            &:after {
+                position: fixed;
+                left: 50%;
+                transform: translateX(-50%);
+                width: calc(100% - 4rem);
+                top: 6.5rem;
+                border-bottom-width: 0;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xxxl) {
+        &.-corner {
+            overflow: visible;
+
+            .js-menu-fixed &{
+                .overflower.-top {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: calc(1640px - 2rem);
+                }
+            }
+
+            &:after {
+                left: calc((100vw - 1640px) / 2);
+                right:calc((100vw - 1640px) / 2);
+                width: 1640px;
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.main-content {
+    min-height: calc(100vh - 28rem);
+
+    @media screen and (max-height: 1080px) {
+        &.training {
+            min-height: calc(840px);
+        }
+    }
+}
+
+h1, .h1 {
+    font-family: $font-family-head;
+    font-weight: 700;
+    font-size: 3.375rem;
+    line-height: 1;
+}
+
+h2, .h2 {
+    font-family: $font-family-head;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.11;
+}
+
+h3, .h3 {
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+
+}
+
+h4, .h4 {
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+h5, .h5 {
+    font-family: $font-family-base;
+    font-weight: 700;
+    font-size: .75rem;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    position: relative;
+
+}
+
+.hrwhite {
+    background-color: $white !important;
+    height: 1px !important;
+    opacity: 1 !important;
+}
+
+@include media-breakpoint-up(lg) {
+    h1, .h1 {
+        font-size: 4rem;
+    }
+
+    h2, .h2 {
+        font-size: 2.25rem;
+    }
+
+    h3, .h3 {
+        font-size: 2.5rem;
+    }
+
+    h4, .h4 {
+        font-size: 1.5rem;
+    }
+
+    a {
+        &:not(.stretched-link):not(.base-link):not(.page-link), {
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: bottom;
+
+            &:before {
+                width: 0;
+                content: '';
+                position: absolute;
+                top: calc(100% - 2px);
+                left: 50%;
+                height: 2px;
+                background-color: $secondary;
+                transition: all .3s ease;
+                z-index: 10;
+            }
+
+            &:hover,
+            &:focus {
+                &:before {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@include media-breakpoint-up(xxl) {
+    h1, .h1 {
+        font-size: 6rem;
+    }
+
+    h2, .h2 {
+        font-size: 3rem;
+    }
+}

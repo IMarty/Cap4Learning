@@ -1,0 +1,46 @@
+<div class="searchbar js-animation" id="searchbar">
+    <div class="position-relative h-100 w-100">
+        <div class="container-fluid h-100">
+            <div class="row align-items-center justify-content-center h-100">
+                <div class="col-10 col-lg-8">
+                    <div class="searchbar__wrapper">
+                        <img src="{{ asset('static/img/logo_white.svg') }}" alt="CAP4Learning logo" class="searchbar__logo">
+
+                        <h2 class="h2 searchbar__title">
+                            <svg class="icon icon-search "><use xlink:href="#icon-search"></use></svg>
+                            {{ 'Search our <br>programs' | trans | raw  }}
+                        </h2>
+
+                        <p class="searchbar__description">{{ 'and discover today how we will help you' | trans }}</p>
+
+                        {{ form_start(form) }}
+                            <div class="d-flex flex-column flex-lg-row justify-content-center align-items-stretch align-items-lg-center">
+                                <div class="flex-grow-1">
+                                    {{ form_row(form.title, {'label_class': 'visually-hidden', 'label': ('What do you want to learn today ?' | trans)}) }}
+                                    <span class="d-none"> {{ form_row(form.eligibleCpf, {'label_class': 'visually-hidden'}) }}</span>
+                                </div>
+
+                                <div class="text-center ms-lg-3 mt-4 mt-lg-0 flex-grow-2">
+                                    <div class="btn-fx-wrapper mt-lg-2">
+                                        <span class="btn-fx-circle"></span>
+                                        <button type="submit" class="btn btn-primary btn-fx-container">
+                                            <span class="btn-fx-inner">
+                                                {{ 'Find!' | trans }}
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="js-searchbar-closing btn btn-link searchbar__close">
+            <svg class="icon icon-cross text-white"><use xlink:href="#icon-cross"></use></svg>
+            <span class="visually-hidden">{{ 'Search' | trans }}</span>
+        </button>
+    </div>
+</div>

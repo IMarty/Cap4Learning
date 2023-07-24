@@ -1,0 +1,24 @@
+security:
+    encoders:
+        Nucleos\UserBundle\Model\UserInterface: auto
+
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    providers:
+        nucleos_userbundle:
+            id: nucleos_user.user_provider.username
+
+    firewalls:
+        main:
+            pattern: ^/
+            form_login:
+                provider: nucleos_userbundle
+
+            logout: true
+            anonymous: true
+    access_control:
+        - { path: ^/change-password, role: IS_AUTHENTICATED_REMEMBERED }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/trans/update, role: ROLE_ADMIN }

@@ -1,0 +1,8 @@
+# app/config/routing.yml
+lexik_translation_edition:
+  resource: "@LexikTranslationBundle/Resources/config/routing.yml"
+  prefix:   /trans/update
+
+media:
+  resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
+  prefix: /media

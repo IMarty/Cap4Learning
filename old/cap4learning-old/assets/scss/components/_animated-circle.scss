@@ -1,0 +1,36 @@
+.animated-circle {
+    position: absolute;
+    width: 4.875rem;
+    height: 4.875rem;
+    border-radius: 50%;
+    border: 2px solid $white;
+
+    &.-small {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    &.-medium {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &.-pink {
+        border-color: $secondary;
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: 7.5rem;
+        height: 7.5rem;
+
+        &.-small {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+
+        &.-medium {
+            width: 4.25rem;
+            height: 4.25rem;
+        }
+    }
+}

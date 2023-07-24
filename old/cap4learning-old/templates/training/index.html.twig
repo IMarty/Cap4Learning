@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% if currentCategory is null %}
+        {{ 'All courses SEO' | trans }}
+    {% else %}
+        {{ currentCategory.title }} {{ 'courses' | trans }}
+    {% endif %}
+{% endblock %}
+
+{% block seoDesc %}
+    {% if currentCategory is null %}
+        {{ 'SEO Basic description' | trans }}
+    {% else %}
+        {{ currentCategory.description }} {{ 'courses' | trans }}
+    {% endif %}
+{% endblock %}
+
+{% block mainClass %}
+    js-menu-fixed
+{% endblock %}
+
+{# Prepare pagination filters #}
+{% set routeParameters = {} %}
+{% set currentRoute = 'training_list' %}
+{% set formParameters = app.request.get('training_search') %}
+
+{% if app.request.get('search') is defined %}
+    {% set routeParameters = routeParameters|merge({'training_search[title]': app.request.get('search') })  %}
+{% endif %}
+
+{% if formParameters | length %}
+    {% if formParameters.title is defined %}
+        {% set routeParameters = routeParameters|merge({'training_search[title]': formParameters.title})  %}
+    {% endif %}
+
+    {% if formParameters.eligibleCpf is defined %}
+        {% set routeParameters = routeParameters|merge({'training_search[eligibleCpf]': formParameters.eligibleCpf}) %}
+    {% endif %}
+
+    {% if formParameters._token is defined %}
+        {% set routeParameters = routeParameters|merge({'training_search[_token]': formParameters._token}) %}
+    {% endif %}
+{% endif %}
+
+{% if app.request.get('slug') is defined %}
+    {% set routeParameters = routeParameters|merge({'slug': app.request.get('slug') })  %}
+{% endif %}
+
+{% block body %}
+
+<div class="row justify-content-center">
+    <div class="col-10">
+        <div class="training main-content -listing">
+            <div class="training__head" id="js-training-menu">
+                <h2 class="h2 mb-3 mb-xhd-5">
+                    {{ 'Our course catalog' | trans | raw}}
+                </h2>
+
+                <p class="training__head-desc">
+                    {{ 'Lead vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum.' | trans }}
+                </p>
+
+                {{ form_start(filtersForm) }}
+                    <div class="d-flex flex-column flex-md-row  flex-xxl-row align-items-stretch align-items-md-start align-items-xxl-start mt-5 mt-md-4 mt-xxl-0">
+                        <div class="training__head-filter">
+                            {{ form_row(filtersForm.title) }}
+                            {{ form_row(filtersForm.eligibleCpf) }}
+                        </div>
+
+                        <div class="pt-4 ms-lg-3 pt-md-1 pt-xxl-1 text-center">
+                            <div class="btn-fx-wrapper">
+                                <span class="btn-fx-circle"></span>
+                                <button type="submit" class="btn btn-primary btn-fx-container">
+                                <span class="btn-fx-inner">
+                                    {{ 'Find!' | trans }}
+                                </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                {{ form_end(filtersForm) }}
+
+
+
+                <nav class="training__nav" id="navbar-categories">
+                    <div class="d-none d-xxl-block">
+                        <ul>
+                            <li>
+                                <a href="{{ path('training_list', {'slug': ('all_' | trans)}) }}"
+                                   {% if currentCategory == null %}class="active"{% endif %}
+                                >{{('All' | trans)}}</a>
+                            </li>
+                            {% for category in categories %}
+                                <li>
+                                    <a href="{{ path('training_list', {'slug': category.slug}) }}"
+                                       {% if category == currentCategory %}class="active"{% endif %}>
+                                        {{ category.title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                            <li>
+                                <a href="{{ path('page_surmesure') }}">{{('Tailor-made' | trans)}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="d-xxl-none">
+                    <div class="home__training-dropdown dropdown">
+                        <button class="btn btn-underline dropdown-toggle text-start" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ 'Choose a category' | trans }}
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="{{ path('training_list', {'slug': ('all' | trans)}) }}">{{ 'All' | trans }}</a></li>
+                            {% for category in categories %}
+                                <li><a class="dropdown-item" href="{{ path('training_list', {'slug': category.slug}) }}">{{ category.title }}</a></li>
+                            {% endfor %}
+                            <li><a class="dropdown-item" href="{{ path('page_surmesure') }}">{{ 'Tailor-made' | trans }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="training__listing">
+                <h1 class="h3 mb-3">
+                    {% if currentCategory is not null %}
+                        {{ currentCategory.title }}
+                    {% elseif formParameters.title is defined and formParameters.title | length%}
+                        {{ 'Search' | trans }} : {{ formParameters.title | e}}
+                    {% else %}
+                        {{ 'All classes' | trans }}
+                    {% endif %}
+                </h1>
+
+                <ul class="training__listing-list list-unstyled">
+                    {% if trainings | length %}
+                        {% for training in trainings %}
+                        <li>
+                            {% include 'training/teaser-listing.html.twig' with {'training': training} %}
+                        </li>
+                        {% endfor %}
+                    {% else %}
+                        <p>{{ 'No results found for your search.' | trans }}</p>
+                    {% endif %}
+                </ul>
+
+                <div class="training__listing-pagination mt-4">
+                    {% include 'components/pagination.html.twig' with {
+                        'total':pager.total_pages,
+                        'current':pager.current_page,
+                        'nearbyPagesLimit': 3,
+                        'routeParameters': routeParameters,
+                        'route': currentRoute
+                    } %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

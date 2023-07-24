@@ -1,0 +1,17 @@
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    transition: $transition-base;
+
+    &.-small {
+        width: 1.125rem;
+        height: 1.125rem;
+        min-width: 1.125rem;
+    }
+
+    &.-medium {
+        width: 2rem;
+        height: 2rem;
+    }
+}

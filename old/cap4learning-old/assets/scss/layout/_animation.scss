@@ -1,0 +1,16 @@
+.js-animation {
+    visibility: hidden;
+    animation-fill-mode: backwards;
+
+    &.-active {
+        visibility: visible;
+    }
+
+    @media reader {
+        visibility: visible;
+    }
+}
+
+.animate__delay-05 {
+    --animate-delay: 0.5s;
+}

@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'News SEO' | trans}}
+{% endblock %}
+
+{% block seoDesc %}
+    {{ 'SEO News listing description' | trans }}
+{% endblock %}
+
+{% block mainClass %}
+    js-menu-fixed
+{% endblock %}
+
+{# Prepare pagination filters #}
+{% set routeParameters = {} %}
+{% set currentRoute = 'news_listing' %}
+{% set formParameters = app.request.get('training_search') %}
+
+{% block body %}
+<div class="row justify-content-center">
+    <div class="col-10">
+        <div class="page main-content">
+            <div class="page__main">
+                <h1 class="h2">
+                    {{ "Our latest<br> news" | trans | raw }}
+                </h1>
+
+                <div class="wysiwyg">
+                    {{ 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.' | trans}}
+                </div>
+            </div>
+
+            <div class="page__content">
+                <div class="page__half">
+                    {% if newsListing | length %}
+                        {% set first = true %}
+                        {% for news in newsListing %}
+                            {% if first %}
+                                {% include 'news/teaser-wide.html.twig' %}
+                                {% set first = false %}
+                            {% else %}
+                                {% include 'news/teaser.html.twig' %}
+                            {% endif%}
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="page__pagination">
+                        {% include 'components/pagination.html.twig' with {
+                            'total': pager.total_pages,
+                            'current': pager.current_page,
+                            'nearbyPagesLimit': 3,
+                            'routeParameters': routeParameters,
+                            'route': currentRoute
+                        } %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

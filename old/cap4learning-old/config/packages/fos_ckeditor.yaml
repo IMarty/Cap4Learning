@@ -1,0 +1,29 @@
+# Read the documentation: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html
+
+twig:
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+
+fos_ck_editor:
+    base_path: "build/ckeditor"
+    js_path:   "build/ckeditor/ckeditor.js"
+    auto_inline: true
+    default_config: my_config
+    configs:
+        my_config:
+            stylesSet: "my_styles"
+            format_tags: 'p;h2;h3'
+            toolbar: 'my_toolbar'
+            allowedContent: true
+    styles:
+        my_styles:
+            - { name: "Big Title", element: "h2", attributes: {class : "h2" } }
+            - { name: "Medium Title", element: "h2", attributes: {class : "h3" } }
+            - { name: "Small Title", element: "h2", attributes: {class : "h4" } }
+            - { name: "Big Subtitle", element: "h3", attributes: {class : "h2" }  }
+            - { name: "Medium Subtitle", element: "h3", attributes: {class : "h3" } }
+            - { name: "Small Subtitle", element: "h3", attributes: {class : "h4" } }
+    toolbars:
+        configs:
+            my_toolbar: [ ['Bold', 'Italic'], ['Link', 'Unlink'], ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'], ['Styles', 'Table', 'Source']]
+

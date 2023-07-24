@@ -1,0 +1,59 @@
+{% if total > 1 %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center justify-content-lg-end">
+
+        <li class="page-item {% if total == 1 %}disabled{% endif %}">
+            <a class="page-link -action"
+                    {% if current > 1 %}
+                href="{{ path(route, routeParameters|merge({'page': (current - 1) })) }}"
+                aria-disabled="true"
+                    {% endif %}
+               tabindex="-1">
+                <svg class="icon icon-previous"><use xlink:href="#icon-previous"></use></svg>
+                <span class="visually-hidden">
+                     {{ 'Previous' | trans }}
+                </span>
+            </a>
+        </li>
+
+        {% for i in 1..total %}
+            {% if 0 == (current - nearbyPagesLimit) - loop.index %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ path(route, {'slug': app.request.get('slug') ,'page': 1})  }}">1</a>
+                </li>
+                <li class="page-item">
+                    <span>…</span>
+                </li>
+            {% elseif 0 == (current + nearbyPagesLimit) - loop.index  and (current + nearbyPagesLimit) < total %}
+                <li class="page-item">
+                    <span>…</span>
+                </li>
+            {% elseif 0 < (current - nearbyPagesLimit) - loop.index %}
+            {% elseif 0 > (current + nearbyPagesLimit) - loop.index %}
+            {% else %}
+                <li class="page-item">
+                    <a class="page-link {% if current == loop.index  %}active{% endif %}" href="{{ path(route, routeParameters|merge({'page': loop.index })) }}">{{ loop.index }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        {% if current != total  and (current + nearbyPagesLimit) < total %}
+            <li class="page-item">
+                <a class="page-link" href="{{ path(route, routeParameters|merge({'page': total })) }}">{{ total }}</a>
+            </li>
+        {% endif %}
+
+        <li class="page-item">
+            <a class="page-link {% if current == total %}disabled {% endif %} -action"
+                    {% if current < total %}
+                href="{{ path(route, routeParameters|merge({'page': current + 1 })) }}"
+                    {% endif %}>
+                <svg class="icon icon-next"><use xlink:href="#icon-next"></use></svg>
+                <span class="visually-hidden">
+                     {{ 'Next' | trans}}
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endif %}

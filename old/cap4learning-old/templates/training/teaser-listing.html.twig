@@ -1,0 +1,82 @@
+<article class="training-listing">
+    <div class="training-listing__head">
+        <span class="training-listing__category">
+            {{ training.category.title }}
+        </span>
+        <h3 class="training-listing__title">
+            {% if training.createdAt > date(training_new_date_limit) %}
+                <span class="text-secondary">{{ 'New' | trans}}</span>
+            {% endif %}
+            {{ training.title }}
+        </h3>
+        <div class="training-listing__desc wysiwyg">
+            {{ training.shortDescription | raw}}
+        </div>
+        {% if training.eligibleCpf %}
+        <div class="training-listing__cpf">
+            <div class="position-relative">
+                {{ 'CPF' | trans }}
+                <svg class="icon icon-check text-secondary -medium"><use xlink:href="#icon-check"></use></svg>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="training-listing__body">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="d-flex flex-column justify-content-start h-100">
+
+                {% if training.nextDate %}
+                    <h4 class="training-listing__subtitle">
+                        {{ 'Available in France and in Luxembourg' | trans | raw }}
+                    </h4>
+
+                    <h4 class="training-listing__subtitle mb-0">
+                        {{ 'Next session' | trans }}
+                    </h4>
+                    <h4 class="training-listing__nextsess">
+                        {{ training.nextDate | date("d / m / Y") }}
+                    </h4>
+                {% endif %}
+
+                {% if training.durationDays or training.durationHours %}
+                    <div class="d-flex flex-row align-items-center training-listing__duration mt-2">
+                        <svg class="icon icon-clock -small me-2"><use xlink:href="#icon-clock"></use></svg>
+                        {% if training.durationDays %}
+                            {{ training.durationDays }} {{ 'day(s)' | trans }}
+                        {% endif %}
+                        {% if training.durationDays or training.durationHours %}
+                        &nbsp;/&nbsp;
+                        {% endif %}
+                        {% if training.durationHours %}
+                          {{ training.durationHours }} {{ 'hour(s)' | trans }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-6  mt-3 mt-xxl-0">
+                {% if training.goals | length %}
+                <h4 class="training-listing__subtitle">{{ 'Educational goals' | trans }}</h4>
+                <div class="training-listing__desc wysiwyg">
+                    {% for goal in training.goals %}{% if loop.first == false%}, {% endif %}{{ goal }}{% endfor %}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="col-lg-3 mt-4 mt-xxl-0">
+               <div class="d-flex align-items-center justify-content-xxl-end h-100">
+                   <a href="{{ path('training_detail', {'slug_category': training.category.slug, 'slug': training.slug}) }}" class="btn btn-primary stretched-link">
+                       {{ 'Details' | trans }}
+                       <svg class="icon icon-next ms-2 text-white"><use xlink:href="#icon-next"></use></svg>
+                   </a>
+               </div>
+            </div>
+        </div>
+    </div>
+</article>

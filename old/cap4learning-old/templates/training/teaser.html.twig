@@ -1,0 +1,18 @@
+<article class="training-teaser">
+    <div class="training-teaser__wrapper">
+        <div class="training-teaser__tile">
+            <div class="training-teaser__inside">
+                <h3 class="training-teaser__title">
+                    {{ training.title }}
+                </h3>
+{#                <p class="training-teaser__desc">#}
+{#                    {{ training.shortDescription | slice(0, 100)}} ...#}
+{#                </p>#}
+                <a href="{{ path('training_detail', {'slug_category': training.category.slug, 'slug': training.slug}) }}" class="training-teaser__link stretched-link">
+                    <span class="visually-hidden">{{ 'Read more' | trans }}</span>
+                    <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>

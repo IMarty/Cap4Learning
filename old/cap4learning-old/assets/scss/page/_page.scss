@@ -1,0 +1,62 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: calc(100vh - 28rem);
+
+    &__main {
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .wysiwyg {
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 2;
+        }
+    }
+
+    &__content {
+        margin-top: 1rem;
+    }
+
+    a {
+        position: static;
+    }
+
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        padding-top: 4rem;
+        padding-left: 0;
+        padding-right: 0;
+
+        &__main {
+            width: 30%;
+            padding-right: 1rem;
+        }
+
+        &__content {
+            width: 70%;
+            padding-left: .5rem;
+            margin-top: 0;
+        }
+
+        &__half {
+            width: 57%;
+        }
+
+        &__pagination {
+            margin-top: 1.5rem;
+        }
+    }
+
+    @include media-breakpoint-up(xhd) {
+        &__main {
+            h2 {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

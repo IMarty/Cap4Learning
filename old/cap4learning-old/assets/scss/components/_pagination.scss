@@ -1,0 +1,67 @@
+.pagination {
+
+    .page-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        span {
+            line-height: 1;
+            font-size: .75rem;
+        }
+
+        + .page-item {
+            margin-left: .5rem;
+        }
+
+        &:first-child {
+            margin-left: 1.5rem;
+        }
+
+        &:last-child {
+            margin-right: 1.5rem;
+        }
+    }
+
+    .page-link {
+        background-color: transparent;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        border-color: transparent;
+        border-width: 2px;
+        font-size: 1rem;
+        padding: 0;
+
+        svg {
+            fill: $white;
+            transition: $transition-base;
+
+            &:hover {
+                fill: $secondary;
+            }
+        }
+
+        &.active,
+        &:active,
+        &:hover {
+            &:not(.-action) {
+                border-color: $secondary;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+
+        .page-link {
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: .75rem;
+        }
+    }
+}

@@ -1,0 +1,318 @@
+.training-detail {
+    padding-top: 7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &__banner {
+        margin-top: 1.5rem;
+    }
+
+    &__cta {
+        padding-left: 1.25rem;
+    }
+
+    &__cpf {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        border: 2px solid $primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: .75rem;
+        font-weight: 700;
+        position: absolute;
+        top: -15px;
+        left: 72%;
+        z-index: 15;
+
+        .icon {
+            position: absolute;
+            z-index: 10;
+            width: 1.25rem;
+            height: 1.25rem;
+            top: 104%;
+            left: 90%;
+        }
+    }
+
+    &__banner-left {
+        overflow: hidden;
+        position: relative;
+        border-radius: 1.25rem;
+
+    }
+
+    &__banner-right {
+        padding: 1.25rem;
+        border-top-left-radius: 1.25rem;
+        border-bottom-left-radius: 1.25rem;
+        background-color: $white;
+    }
+
+    &__info {
+        hr {
+            background-color: $white;
+            height: 2px;
+            opacity: 1;
+        }
+
+        .wysiwyg.-lead {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .wysiwyg {
+            + .h4 {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    &__program {
+        position: relative;
+        background-color: $white;
+        padding: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+
+        ul {
+            li {
+                + li {
+                    margin-top: 1rem;
+                }
+
+                &:before {
+                    top: 11px;
+                    background-color: $primary;
+                }
+            }
+        }
+
+        h3 {
+            margin-top: 0 !important;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+    }
+
+    &__modules {
+        ul {
+            li {
+               &:before {
+                   background-color: $secondary;
+               }
+            }
+        }
+
+        + .training-detail__modules {
+            margin-top: 2rem;
+        }
+    }
+
+    &__feature {
+        .wysiwyg {
+            + .h5 {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .training__contact {
+        border-top-left-radius: 0;
+    }
+
+
+    &__slots {
+        overflow: hidden;
+        transition: $transition-base;
+        margin-top: 1.5rem;
+
+        .training-slot {
+            transition: $transition-base;
+
+            &:nth-child(n+5) {
+                margin-top: 0;
+                max-height: 0;
+                overflow: hidden;
+            }
+        }
+
+        &.active {
+            .training-slot {
+                &:nth-child(n+5) {
+                    max-height: 400px;
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+
+    &__slots-btn {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        &.active {
+            display: none !important;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__banner-right {
+            margin-top: 2.5rem;
+            margin-right: -10%;
+            position: relative;
+        }
+
+        &__program {
+            border-bottom-right-radius: 1.25rem;
+            border-top-right-radius: 1.25rem;
+            padding-left: 0;
+            margin-bottom: 2rem;
+
+            &:before {
+                right: 100%;
+                top: 0;
+                height: 100%;
+                content: '';
+                position: absolute;
+                width: 10%;
+                background-color: $white;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 2.5rem;
+        padding-left: 0;
+        padding-right: 0;
+
+        &__banner {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        &__banner-left {
+            width: calc(50% - .5rem);
+            margin-right: .5rem;
+            height: 15.75rem;
+
+            img {
+                width: auto;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+
+        &__banner-right {
+            width: calc(50% - .5rem);
+            margin-left: .5rem;
+            position: relative;
+            padding: 2.25rem;
+
+            a {
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    background-color: $primary;
+                    content : '';
+                }
+            }
+
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 100%;
+                height: 100%;
+                width: 15%;
+                background-color: $white;
+            }
+        }
+
+        &__info {
+            padding-right: 25%;
+
+            hr {
+                margin-left: -13%;
+            }
+        }
+
+        &__bottom {
+            padding-right: 25%;
+        }
+
+        &__cpf {
+            width: 5.625rem;
+            height: 5.625rem;
+            font-size: 1.25rem;
+            top: -1.5rem;
+            right: -1rem;
+            left: auto;
+
+            .icon {
+                width: 2.875rem;
+                height: 2.875rem;
+                top: 115%;
+                left: 106%;
+            }
+        }
+
+        &__program {
+            padding-right: 15%;
+            padding-left: 0;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            border-top-right-radius: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+
+            &:before {
+                right: 100%;
+                top: 0;
+                height: 100%;
+                content: '';
+                width: 34%;
+                position: absolute;
+                background-color: $white;
+            }
+        }
+
+        &__feature {
+            position: absolute;
+            top: 4rem;
+            left: 87.5%;
+            width: 25%;
+        }
+    }
+
+    @include media-breakpoint-up(xxxl) {
+        &__slots {
+            margin-top: 0;
+        }
+
+        &__banner-right {
+            &:after {
+                width: 20%;
+            }
+        }
+
+        &__cpf {
+            right: -3rem;
+        }
+    }
+}

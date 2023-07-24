@@ -1,0 +1,3 @@
+# config/routes/nucleos_user.yaml
+nucleos_user:
+  resource: "@NucleosUserBundle/Resources/config/routing/all.xml"

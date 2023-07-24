@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ page.title }}
+{% endblock %}
+
+{% block seoDesc %}
+    {{ page.shortDescription }}
+{% endblock %}
+
+{% block mainClass %}
+    js-menu-fixed
+{% endblock %}
+
+{% block body %}
+<div class="row justify-content-center">
+    <div class="col-10">
+        <div class="page main-content">
+            <div class="page__main">
+                <h1 class="h2">
+                    {{ page.title }}
+                </h1>
+
+                {% if page.longDescription | length %}
+                    <div class="wysiwyg">
+                        {{ page.longDescription | raw}}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="page__content">
+                {% for paragraph in page.paragraphs %}
+                    {% if paragraph.disposition == 'big_image' %}
+                        {% include 'paragraphs/big_image.html.twig' with {'paragraph': paragraph} %}
+                    {% elseif paragraph.disposition == 'small_image' %}
+                        {% include 'paragraphs/small_image.html.twig' with {'paragraph': paragraph} %}
+                    {% elseif paragraph.disposition == 'one_column' %}
+                        {% include 'paragraphs/one_column.html.twig' with {'paragraph': paragraph} %}
+                    {% elseif paragraph.disposition == 'two_column' %}
+                        {% include 'paragraphs/two_column.html.twig' with {'paragraph': paragraph} %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

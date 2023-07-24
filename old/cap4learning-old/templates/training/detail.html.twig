@@ -1,0 +1,323 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ training.title }}
+{% endblock %}
+
+{% block seoDesc %}
+    {{ training.shortDescription }}
+{% endblock %}
+
+{% block seoMetas %}
+    {{ training.metas }}
+{% endblock %}
+
+{% block mainClass %}
+    js-menu-fixed
+{% endblock %}
+
+
+{% block seoImg %}
+  {% if training.picture is not null %}
+      {% set imgTmp %}{% path training.picture, 'share' %}{% endset %}
+      {% if imgTmp is not null %}
+          <meta property="og:image" content="{{ absolute_url(imgTmp) }}" />
+      {% endif %}
+  {% else %}
+    <meta property="og:image" content="{{ absolute_url(asset('static/img/training/default.png')) }}" />
+  {% endif %}
+{% endblock %}
+
+{% block body %}
+
+<div class="training-detail">
+    <div class="row justify-content-center">
+        <div class="col-10 col-lg-8">
+            <div class="training-detail__header">
+                <a href="{{ path('training_list', {'slug': training.category.slug}) }}" class="training__head-link">
+                    {{ training.category.title }}
+                </a>
+
+                <h1 class="h2">
+                    {{ training.title }}
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="training-detail__banner">
+                <div class="training-detail__banner-left">
+                    {% if training.picture %}
+                        <img src="{% path training.picture, 'reference' %}" alt="{{ training.category.title }}" class="training__main-img">
+                    {% else %}
+                        <img src="{{ asset('static/img/training/default.png') }}" alt="{{ training.category.title }}" class="training__main-img">
+                    {% endif %}
+                </div>
+
+                <div class="training-detail__banner-right">
+                        <div class="ms-xxl-3 ps-xxl-1 mb-4">
+                            <div class="training-detail__slots js-training-slot-wrapper">
+{#                                {% if training.nextDate %}#}
+{#                                    <div class="">#}
+{#                                        <h4 class="training-listing__subtitle mb-0">#}
+{#                                            {{ 'Next session' | trans }}#}
+{#                                        </h4>#}
+{#                                        <h4 class="training-listing__nextsess">#}
+{#                                            {{ training.nextDate | date("d / m / Y") }}#}
+{#                                        </h4>#}
+{#                                    </div>#}
+{#                                {% endif %}#}
+
+                                {% if training.sessions | length %}
+                                    <div class="training-slot">
+                                        <div class="training-slot__date">
+                                            <h4 class="training-listing__subtitle mb-0">
+                                                {{ 'Next session' | trans }}
+                                            </h4>
+                                        </div>
+
+                                        <div class="training-slot__location">
+                                            <svg class="icon icon-location -small"><use xlink:href="#icon-location"></use></svg>
+                                        </div>
+
+                                        <div class="training-slot__lang">
+                                            <svg class="icon icon-lang -small"><use xlink:href="#icon-lang"></use></svg>
+                                        </div>
+
+                                        <div class="training-slot__availibility">
+
+                                        </div>
+                                    </div>
+
+                                    {% for session in training.sessions %}
+                                        {% if session.startDate > date() %}
+
+                                        <div class="training-slot">
+                                            <div class="training-slot__date">
+                                                <span>
+                                                    {{ session.startDate | date("d / m / Y") }}
+                                                </span>
+                                            </div>
+                                            <div class="training-slot__location">
+                                                {% if session.location %}
+                                                    <span>
+                                                        {{ session.location }}
+                                                    </span>
+                                                {% endif %}
+                                            </div>
+                                            <div class="training-slot__lang">
+                                                {% if session.language %}
+                                                    <span>
+                                                        {{ session.language }}
+                                                    </span>
+                                                {% endif %}
+                                            </div>
+                                            <div class="training-slot__availibility">
+                                                {% if session.getSoldOut %}
+                                                    <span>
+                                                        {{ 'training.session.complete' | trans }}
+                                                    </span>
+                                                    <svg class="icon icon-across -small"><use xlink:href="#icon-across"></use></svg>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            {% if (training.sessions | length) > 3 %}
+                                <a href="#" class="js-training-slot-btn training-detail__slots-btn">
+                                    {{ 'training.session.more' | trans}}
+                                </a>
+                            {% endif %}
+                        </div>
+
+                    <p class="training-detail__cta">
+                        {{ 'Available in France and in Luxembourg' | trans | raw }}
+                    </p>
+
+                    {% if training.durationDays or training.durationHours %}
+                    <div class="d-flex flex-row align-items-center mb-2">
+                        <svg class="icon icon-clock -small me-2"><use xlink:href="#icon-clock"></use></svg>
+                        <span>
+                        {% if training.durationDays %}
+                            {{ training.durationDays }} {{ 'day(s)' | trans }}
+                        {% endif %}
+                        {% if training.durationDays and training.durationHours%}
+                            &nbsp;/&nbsp;
+                        {% endif %}
+                        {% if training.durationHours %}
+                            {{ training.durationHours }} {{ 'hour(s)' | trans }}
+                        {% endif %}
+                        </span>
+                    </div>
+                    {% endif %}
+
+                    {% if training.priceInter is not empty %}
+                        <div class="d-flex flex-row align-items-center mb-2">
+                            <svg class="icon icon-euro -small me-2"><use xlink:href="#icon-euro"></use></svg>
+                            {{ training.priceInter }} € HT ( {{ 'Inter Price' | trans }} )
+                        </div>
+                    {% endif %}
+
+                    <p class="training-detail__cta">
+                        {{ '<a href="#contact">Contact us</a> for an <br> intra-communautary quote' | trans | raw }}
+                    </p>
+
+                    {% if training.file is not empty %}
+                        <div class="d-flex flex-row align-items-center mb-2">
+                            <svg class="icon icon-download -small me-2"><use xlink:href="#icon-download"></use></svg>
+                            <a href="{% path training.file, 'reference' %}">
+                                {{ 'Info-sheet' | trans }}
+                            </a>
+                        </div>
+                    {% endif %}
+
+                    {% if training.eligibleCpf == true %}
+                        <div class="training-detail__cpf">
+                            <div class="position-relative">
+                                {{ 'CPF' | trans }}
+                                <svg class="icon icon-check text-secondary"><use xlink:href="#icon-check"></use></svg>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-10 col-lg-8">
+
+            <div class="training-detail__info">
+
+                <div class="wysiwyg -lead">
+                    {{ training.longDescription | raw }}
+                </div>
+
+                <hr>
+
+                {% if training.coveredSkills is not empty %}
+                    <h2 class="h4">{{ 'Covered skills' | trans }}</h2>
+                    <div class="wysiwyg">
+                        <ul>
+                            {% for skill in training.coveredSkills %}
+                                <li>{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
+                {% if training.goals is not empty %}
+                    <h2 class="h4">{{ 'Educational goals' | trans }}</h2>
+                    <div class="wysiwyg">
+                        <ul>
+                            {% for goal in training.goals %}
+                                <li>{{ goal }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
+                {% if training.audience is not empty %}
+                    <h2 class="h4">{{ 'Audience' | trans }}</h2>
+                    <div class="wysiwyg">
+                        {{ training.audience | raw }}
+                    </div>
+                {% endif %}
+
+                {% if training.requirements is not empty %}
+                    <h2 class="h4">{{ 'Prerequisites' | trans }}</h2>
+                    <div class="wysiwyg">
+                        {{ training.requirements | raw }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="training-detail__bottom">
+                <div class="training-detail__program">
+                    {% if training.modules is not empty %}
+                        <h2 class="h3 mt-4 mb-5">{{ 'Program' | trans }}</h2>
+                        <div class="training__main-row">
+                            {% for module in training.modules %}
+                                <div class="training-detail__modules wysiwyg">
+                                    <h3 class="h4">{{ module.title }}</h3>
+                                    <div>
+                                        {{ module.description | raw }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="training-detail__feature">
+                    {% if training.methods is not empty %}
+                        <h3 class="h5">
+                            {{ 'Educational <br> Methods' | trans | raw}}
+                        </h3>
+                        <div class="wysiwyg">
+                            {{ training.methods | raw }}
+                        </div>
+                    {% endif %}
+
+                    {% if training.achievement is not empty %}
+                        <h3 class="h5">
+                            {{ 'Achievement <br>methods' | trans | raw }}
+                        </h3>
+                        <div class="wysiwyg">
+                            {{ training.achievement | raw }}
+                        </div>
+                    {% endif %}
+
+                    {% if training.trainer is not empty %}
+                        <h3 class="h5">
+                            {{ 'Trainer' | trans}}
+                        </h3>
+                        <div class="wysiwyg">
+                            {{ training.trainer | raw }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-10">
+
+            <div class="training__contact js-training-form" id="contact">
+
+                <h2 class="h2">{{ 'Request <br>more informations' | trans | raw }}</h2>
+
+                <p class="lead">{{ training.title }}</p>
+
+                {{ form_start(form) }}
+                {{ form_row(form.name) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.type) }}
+                {{ form_row(form.message) }}
+                {{ form_row(form.captcha) }}
+                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center mt-4">
+                    <div class="wysiwyg">
+                        <p>
+                            {{ 'contact.agree.label' | trans | raw }}
+                        </p>
+                    </div>
+                    <div class="btn-fx-wrapper -fixed mt-4 mt-lg-0">
+                        <span class="btn-fx-circle"></span>
+                        <button type="submit" class="btn btn-primary btn-fx-container">
+                                <span class="btn-fx-inner">
+                                    {{ 'Send!' | trans }}
+                                </span>
+                        </button>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

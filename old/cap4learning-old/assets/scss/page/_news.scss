@@ -1,0 +1,38 @@
+.page-news {
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+
+    .wysiwyg {
+        &.-lead {
+            line-height: 2;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__figure {
+        margin-bottom: 1.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 4rem;
+        padding-bottom: 7.5rem;
+        display: flex;
+        flex-direction: column;
+        width: 66.66%;
+        margin-left: auto;
+        margin-right: auto;
+
+        .wysiwyg {
+            table {
+                margin-left: -25%;
+                margin-right: -25%;
+                width: 150% !important;
+            }
+        }
+
+        &__figure {
+            margin-left: -25%;
+            margin-right: -25%;
+        }
+    }
+}

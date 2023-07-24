@@ -1,0 +1,214 @@
+.footer {
+    margin-top: 1.5rem;
+    font-size: .75rem;
+    line-height: 1.5;
+    position: relative;
+    z-index: 150;
+
+    .container-fluid {
+        background-color: $white;
+        padding: 2.75rem 4% 1.75rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__identity {
+
+        img {
+            min-width: 9rem;
+            max-width: 9rem;
+        }
+
+        &-content {
+            margin-top: 1rem;
+            padding-left: 3rem;
+
+            p {
+                font-size: .75rem;
+                line-height: 1.5;
+
+                a {
+                    text-decoration: none;
+                }
+
+                + p {
+                    margin-top: 1.375rem;
+                }
+            }
+
+        }
+    }
+
+    &__nav {
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+
+            li {
+                a {
+                    position: relative;
+                    display: inline-block;
+                    overflow: hidden;
+                    vertical-align: bottom;
+                    padding-bottom: 0 !important;
+                    padding-top: 0 !important;
+                }
+
+                + li {
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+
+    &__socials {
+        a {
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            vertical-align: bottom;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: calc(100% - 2px);
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $secondary;
+                transition: $transition-base;
+                transform: translateX(-100%);
+            }
+
+            &:focus,
+            &:hover {
+                &:before {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    .overflower {
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            width: calc(100%);
+            bottom: 0;
+            height: 4rem;
+            background-color: $teal;
+            top: -4rem;
+            z-index: 25;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: 1.25rem;
+            right: 1.25rem;
+            width: calc(100% - 2.5rem);
+            top: -4rem;
+            height: .75rem;
+            z-index: 50;
+            border-bottom-left-radius: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+            border-bottom: .75rem solid $white;
+            border-left: .75rem solid $white;
+            border-right: .75rem solid $white;
+            border-top: none
+        }
+    }
+
+
+    @include media-breakpoint-down(lg) {
+        .container-fluid {
+            padding: 1.75rem 2.75rem 6rem;
+        }
+
+        &__identity-content {
+            padding-left: 3rem;
+        }
+
+        .intrepide-tag {
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .container-fluid {
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__identity-content {
+            padding-left: 27%;
+        }
+    }
+
+    @include media-breakpoint-down(xxl) {
+        .container-fluid {
+            overflow-x: hidden;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .overflower {
+            &:after {
+                left: 2rem;
+                right: 2rem;
+                width: calc(100% - 4rem);
+            }
+        }
+
+        .container-fluid {
+            &:before {
+                content: '';
+                width: 2.5rem;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 100%;
+                border-top-left-radius: 2.5rem;
+                background-color: $white;
+            }
+
+            &:after {
+                content: '';
+                width: 2.5rem;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                border-top-right-radius: 2.5rem;
+                background-color: $white;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xxxl) {
+        .container-fluid {
+            overflow: visible;
+        }
+
+        .overflower {
+            &:after {
+                left: 0;
+                right: 0;
+                width: 100%;
+            }
+        }
+
+        .footer__identity {
+            padding-left: 1.75rem;
+        }
+    }
+}

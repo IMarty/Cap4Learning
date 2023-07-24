@@ -1,0 +1,129 @@
+.training-listing {
+    padding: 1.5rem 2rem;
+    position: relative;
+    transition: $transition-base;
+
+    &__head {
+        margin-bottom: 1.25rem;
+    }
+
+    &__category {
+        font-size: .625rem;
+        line-height: 1rem;
+        letter-spacing: 1px;
+        margin-bottom: .375rem;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: .75rem;
+        letter-spacing: 1px;
+    }
+
+    &__desc {
+        font-size: .75rem !important;
+    }
+
+    &__body {
+        padding-bottom: 0;
+    }
+
+    &__duration {
+        font-size: .75rem;
+        line-height: 1.6;
+        letter-spacing: 1px;
+    }
+
+    &__nextsess {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        letter-spacing: .5px;
+        font-weight: 500;
+        margin-bottom: 0;
+        margin-top: 0;
+
+        span {
+            display: block;
+            font-size: .625rem;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    &__cpf {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 1px solid $primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: .5rem;
+        font-weight: 700;
+        font-family: $font-family-head;
+        position: absolute;
+        top: 1rem;
+        right: -.5rem;
+        z-index: 15;
+        transition: $transition-base;
+
+        .icon {
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__subtitle {
+        font-size: .75rem;
+        font-weight: bold;
+        letter-spacing: .5px;
+        margin-top: 0;
+        margin-bottom: .375rem;
+        margin-top: .25rem;
+    }
+
+    .btn {
+        padding: .75rem 1.25rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+    }
+
+    ul li:nth-child(2n) & {
+        background-color: $white;
+    }
+
+    ul li:nth-child(2n+1) & {
+        background-color: $gray-400;
+    }
+
+    &:hover,
+    &:focus {
+        box-shadow: $box-shadow;
+        cursor: pointer;
+        z-index: 15;
+        background-color: $white !important;
+
+        .training-listing__cpf {
+            right: 2rem;
+        }
+
+        .btn {
+            background-color: $secondary;
+            border-color: $secondary;
+        }
+    }
+
+    @include media-breakpoint-up(xxl){
+        margin-top: 0;
+    }
+}

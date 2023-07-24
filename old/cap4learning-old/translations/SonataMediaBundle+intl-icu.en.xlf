@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="chyVJa3" resname="media">
+        <source>media</source>
+        <target>__media</target>
+      </trans-unit>
+      <trans-unit id="OCTPMkh" resname="list.label_name">
+        <source>list.label_name</source>
+        <target>__list.label_name</target>
+      </trans-unit>
+      <trans-unit id="uqGGsSH" resname="list.label_description">
+        <source>list.label_description</source>
+        <target>__list.label_description</target>
+      </trans-unit>
+      <trans-unit id="UDfXwla" resname="list.label_enabled">
+        <source>list.label_enabled</source>
+        <target>__list.label_enabled</target>
+      </trans-unit>
+      <trans-unit id="k2OFGve" resname="list.label_size">
+        <source>list.label_size</source>
+        <target>__list.label_size</target>
+      </trans-unit>
+      <trans-unit id="UNwKbqc" resname="filter.label_name">
+        <source>filter.label_name</source>
+        <target>__filter.label_name</target>
+      </trans-unit>
+      <trans-unit id="EVVwmY8" resname="filter.label_provider_reference">
+        <source>filter.label_provider_reference</source>
+        <target>__filter.label_provider_reference</target>
+      </trans-unit>
+      <trans-unit id="sCHvQ7F" resname="filter.label_enabled">
+        <source>filter.label_enabled</source>
+        <target>__filter.label_enabled</target>
+      </trans-unit>
+      <trans-unit id="aNCvGib" resname="filter.label_context">
+        <source>filter.label_context</source>
+        <target>__filter.label_context</target>
+      </trans-unit>
+      <trans-unit id="lsSuxR2" resname="filter.label_width">
+        <source>filter.label_width</source>
+        <target>__filter.label_width</target>
+      </trans-unit>
+      <trans-unit id="uCe7FMN" resname="filter.label_height">
+        <source>filter.label_height</source>
+        <target>__filter.label_height</target>
+      </trans-unit>
+      <trans-unit id="1x06N2A" resname="filter.label_content_type">
+        <source>filter.label_content_type</source>
+        <target>__filter.label_content_type</target>
+      </trans-unit>
+      <trans-unit id="PL0O3Es" resname="filter.label_provider_name">
+        <source>filter.label_provider_name</source>
+        <target>__filter.label_provider_name</target>
+      </trans-unit>
+      <trans-unit id="M.ZA.vy" resname="breadcrumb.link_media_list">
+        <source>breadcrumb.link_media_list</source>
+        <target>__breadcrumb.link_media_list</target>
+      </trans-unit>
+      <trans-unit id="XldsHsg" resname="breadcrumb.link_media_create">
+        <source>breadcrumb.link_media_create</source>
+        <target>__breadcrumb.link_media_create</target>
+      </trans-unit>
+      <trans-unit id="zjh9Xgo" resname="gallery">
+        <source>gallery</source>
+        <target>__gallery</target>
+      </trans-unit>
+      <trans-unit id="QK762of" resname="list.label_context">
+        <source>list.label_context</source>
+        <target>__list.label_context</target>
+      </trans-unit>
+      <trans-unit id="Zw8zWYz" resname="list.label_default_format">
+        <source>list.label_default_format</source>
+        <target>__list.label_default_format</target>
+      </trans-unit>
+      <trans-unit id="mlAI7jm" resname="form.label_context">
+        <source>form.label_context</source>
+        <target>__form.label_context</target>
+      </trans-unit>
+      <trans-unit id="TXGji8g" resname="form.label_enabled">
+        <source>form.label_enabled</source>
+        <target>__form.label_enabled</target>
+      </trans-unit>
+      <trans-unit id="amc0VL9" resname="form.label_name">
+        <source>form.label_name</source>
+        <target>__form.label_name</target>
+      </trans-unit>
+      <trans-unit id="5kBvX7O" resname="form.label_gallery_has_medias">
+        <source>form.label_gallery_has_medias</source>
+        <target>__form.label_gallery_has_medias</target>
+      </trans-unit>
+      <trans-unit id="2JV77Qj" resname="breadcrumb.link_gallery_list">
+        <source>breadcrumb.link_gallery_list</source>
+        <target>__breadcrumb.link_gallery_list</target>
+      </trans-unit>
+      <trans-unit id="R5Hu2V3" resname="breadcrumb.link_gallery_create">
+        <source>breadcrumb.link_gallery_create</source>
+        <target>__breadcrumb.link_gallery_create</target>
+      </trans-unit>
+      <trans-unit id="MItDOzu" resname="gallery_has_media">
+        <source>gallery_has_media</source>
+        <target>__gallery_has_media</target>
+      </trans-unit>
+      <trans-unit id="opbSg2z" resname="list.label_media">
+        <source>list.label_media</source>
+        <target>__list.label_media</target>
+      </trans-unit>
+      <trans-unit id="qleRKaj" resname="list.label_gallery">
+        <source>list.label_gallery</source>
+        <target>__list.label_gallery</target>
+      </trans-unit>
+      <trans-unit id="BoTQm.t" resname="list.label_position">
+        <source>list.label_position</source>
+        <target>__list.label_position</target>
+      </trans-unit>
+      <trans-unit id="oVzyy7r" resname="form.label_media">
+        <source>form.label_media</source>
+        <target>__form.label_media</target>
+      </trans-unit>
+      <trans-unit id="kw1vkRz" resname="form.label_position">
+        <source>form.label_position</source>
+        <target>__form.label_position</target>
+      </trans-unit>
+      <trans-unit id="fJXbFgy" resname="breadcrumb.link_gallery_has_media_list">
+        <source>breadcrumb.link_gallery_has_media_list</source>
+        <target>__breadcrumb.link_gallery_has_media_list</target>
+      </trans-unit>
+      <trans-unit id="jF4Yj5L" resname="breadcrumb.link_gallery_has_media_create">
+        <source>breadcrumb.link_gallery_has_media_create</source>
+        <target>__breadcrumb.link_gallery_has_media_create</target>
+      </trans-unit>
+      <trans-unit id="leS2.uC" resname="description.roles_download_strategy">
+        <source>description.roles_download_strategy</source>
+        <target>__description.roles_download_strategy</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Contact SEO' | trans }}
+{% endblock %}
+
+{% block seoDesc %}
+    {{ 'SEO Contact desc' | trans }}
+{% endblock %}
+
+{% block mainClass %}
+    js-menu-fixed
+{% endblock %}
+
+{% block body %}
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="page main-content">
+                <div class="page__main">
+                    <h1 class="h2">
+                        {{ "Let's get in touch" | trans }}
+                    </h1>
+                </div>
+
+                <div class="page__content">
+                    <div class="paragraph -small-img -contact">
+                        <div class="paragraph__feature" itemscope itemtype="https://schema.org/Organization">
+                            <h3 itemprop="name" class="mb-0">{{ 'CAP4 Learning' }}</h3>
+                            <a href="tel:0033183814115" itemprop="telephone">
+                                +33 1 83 81 41 15
+                            </a>
+                            <p itemprop="address" class="mt-4" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="streetAddress">75 rue de Richelieu</span> <br>
+                                <span itemprop="postalCode">75002 </span>
+                                <span itemprop="addressLocality">Paris <br>France</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="paragraph -form">
+                        <div class="wysiwyg -lead">
+                            <p>
+                                {{ 'Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue.' | trans }}
+                            </p>
+                        </div>
+                        {{ form_start(form, {'attr': {'class': 'form'}}) }}
+                            {{ form_row(form.name) }}
+                            {{ form_row(form.email) }}
+                            {{ form_row(form.message) }}
+                            {{ form_row(form.captcha) }}
+                            <div class="d-flex flex-column justify-content-between align-items-center mt-4">
+                                <div class="wysiwyg">
+                                    <p>
+                                        {{ 'contact.agree.label' | trans | raw }}
+                                    </p>
+                                </div>
+
+                                <div class="btn-fx-wrapper -fixed mt-4 mt-lg-0">
+                                    <span class="btn-fx-circle"></span>
+                                    <button type="submit" class="btn btn-primary btn-fx-container">
+                                        <span class="btn-fx-inner">
+                                            {{ 'Send!' | trans }}
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="visually-hidden">{{ form_row(form.type) }}</div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

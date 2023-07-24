@@ -1,0 +1,369 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ 'We are training experts' | trans}} {% endblock %}
+
+{% block seoDesc%} {{ 'We are training experts' | trans}} {% endblock %}
+
+{% block mainClass %}
+    js-menu-fixed -transparent
+{% endblock %}
+
+{% block body %}
+
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <section class="home__intro" id="home-intro">
+                <h1 class="home__intro-title">{{ 'We are training experts' | trans}}</h1>
+                <p class="home__intro-desc">{{ 'We help people in developing their careers and skills.' | trans}}</p>
+                <div class="home__intro-list">
+                    <img class="home__intro-img" src="{{ asset('static/img/home/cap4_intro_blue.jpg') }}" alt="Cap4Learning - introduction blue picture">
+                    <img class="home__intro-img" src="{{ asset('static/img/home/cap4_intro_pink.jpg') }}" alt="Cap4Learning - introduction pink picture ">
+                    <img class="home__intro-img" src="{{ asset('static/img/home/cap4_intro_yellow.jpg') }}" alt="Cap4Learning - introduction yellow picture">
+                    <img class="home__intro-img" src="{{ asset('static/img/home/cap4_intro_purple.jpg') }}" alt="Cap4Learning - introduction blue picture">
+
+                    <div class="home__intro-circles">
+                        <span class="animated-circle -pink"></span>
+                        <span class="animated-circle -small"></span>
+                        <span class="animated-circle"></span>
+                        <span class="animated-circle"></span>
+                        <span class="animated-circle -medium -pink"></span>
+                        <span class="animated-circle -small"></span>
+                        <span class="animated-circle -medium"></span>
+                    </div>
+                </div>
+             </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 px-0">
+            <section class="home__training" id="home-training">
+                <div class="home__training-listing">
+                    <div class="home__training-search js-animation" id="home-search-bar">
+                        {{ form_start(formTraining) }}
+                             <svg class="icon icon-search "><use xlink:href="#icon-search"></use></svg>
+                            {{ form_row(formTraining.title, {'label_class': 'visually-hidden'}) }}
+                            <span class="d-none"> {{ form_row(formTraining.eligibleCpf, {'label_class': 'visually-hidden'}) }}</span>
+                            <div class="btn-fx-wrapper">
+                                <span class="btn-fx-circle"></span>
+                                <button type="submit" class="btn btn-primary btn-fx-container">
+                                    <span class="btn-fx-inner">
+                                        {{ 'Find!' | trans }}
+                                    </span>
+                                </button>
+                            </div>
+                        {{ form_end(formTraining) }}
+                    </div>
+
+                    <div class="js-animation" id="home-training-list">
+
+                        <h2 class="h3">
+                            {{ 'Our featured <br>training programs :' | trans | raw }}
+                        </h2>
+
+                        <div class="home__training-list">
+                            {% for training in trainings %}
+                                {% include 'training/teaser.html.twig' with {'training': training} %}
+                            {% endfor %}
+
+                            <article class="training-teaser -discover">
+                                <div class="training-teaser__tile">
+                                    <div class="training-teaser__inside">
+                                        <h3 class="training-teaser__title">
+                                            {{ 'Discover our <br> full catalog' | trans | raw }}
+                                        </h3>
+                                        <a href="{{ path('training_list', {'slug': ('all' | trans )}) }}" class="training-teaser__link stretched-link">
+                                            <span class="visually-hidden">{{ 'Read more' | trans }}</span>
+                                            <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="home__training-dropdown dropdown">
+                            <button class="btn btn-underline dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ 'Browse our catalog by category' | trans }}
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="{{ path('training_list', {'slug': ('all' | trans)}) }}">{{ 'All' | trans }}</a></li>
+                                {% for category in trainingsCategories %}
+                                    <li><a class="dropdown-item" href="{{ path('training_list', {'slug': category.slug}) }}">{{ category.title }}</a></li>
+                                {% endfor %}
+                                <li><a class="dropdown-item" href="{{ path('page_surmesure') }}">{{ 'Tailor-made' | trans }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__training-content js-animation animate__slow animate__delay-05" id="home-training-content">
+                    <img class="home__training-img" src="{{ asset('static/img/home/cap4_training.jpg') }}" alt="Cap4Learning -  {{ 'Reach your professional goals now' | trans}}">
+                    <h2 class="home__training-title">
+                        {{ 'Reach your professional goals now' | trans}}
+                    </h2>
+                    <p class="home__training-desc">
+                        {{ 'with Cap4 Learning’s specific educational paths, you’re aiming for excellence.' | trans}}
+                    </p>
+                    <div class="home__training-circles">
+                        <span class="animated-circle -pink"></span>
+                        <span class="animated-circle -medium -pink"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <section class="home__offers" id="home-offer">
+                <div class="home__offers-content js-animation" id="home-offer-content">
+                    <h2 class="home__offers-title">
+                        {{ 'What we offer<span class="text-secondary">.</span> + how we make it happen<span class="text-white">.</span>' | trans | raw }}
+                    </h2>
+                    <p class="home__training-desc">
+                        {{ 'vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum.' | trans }}
+                    </p>
+                    <p class="home__training-desc mt-3">
+                        {{ 'home.what_we_offer.desc2' | trans | raw }}
+                    </p>
+                </div>
+
+                <div class="home__offers-listing js-animation animate__slow" id="home-offer-listing">
+                    <div class="js-offer-expandable offer">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                {{ 'Innovation' | trans }}
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">{{ 'Close' | trans }}</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    {{ 'innovation.desc' | trans }}
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">{{ 'See more' | trans }}</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="js-offer-expandable offer -big">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                {{ 'Develop skills' | trans }}
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">{{ 'Close' | trans }}</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    {{ 'develop.desc' | trans }}
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">{{ 'See more' | trans }}</span>
+                                <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer -big">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                {{ 'Learn future proof Job' | trans | raw}}
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">{{ 'Close' | trans }}</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    {{ "learn.future.desc" | trans }}
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">{{ 'See more' | trans }}</span>
+                                <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                {{ 'Continuous training' | trans | raw }}
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">{{ 'Close' | trans }}</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    {{ "continuous.training.desc" | trans }}
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">{{ 'See more' | trans }}</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer -big">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                {{ 'Take advantage of our trainers experience' | trans | raw }}
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">{{ 'Close' | trans }}</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    {{ "trainer.experience.desc" | trans }}
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">{{ 'See more' | trans }}</span>
+                                <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer -big">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                {{ 'Take advantage of proven training engineering' | trans | raw }}
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">{{ 'Close' | trans }}</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    {{ "training.engineering.desc" | trans }}
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">{{ 'See more' | trans }}</span>
+                                <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                {{ 'Our quality policy' | trans | raw }}
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">{{ 'Close' | trans }}</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    {{ "quality.policy.desc" | trans }}
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">{{ 'See more' | trans }}</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                {{ 'Listen and advice' | trans | raw }}
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">{{ 'Close' | trans }}</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    {{ "listen.advise.desc" | trans }}
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">{{ 'See more' | trans }}</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <img src="{{ asset('static/img/home/cap4_offer.svg') }}" alt="Cap4Learning : Offers" class="logo-offer">
+                </div>
+            </section>
+
+            <section class="my-5 py-lg-5 text-center">
+                <h2>{{ 'home.number.title' | trans }}</h2>
+                <p class="h2">{{ 'home.number.desc' | trans  }}</p>
+            </section>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-6 col-md-2 offset-md-1 position-relative js-animation" id="home-newsletter-img">
+            <img src="{{ asset('static/img/home/cap4_newsletter.jpg') }}" class="home__nl-img" alt="Cap4Learning - {{ 'We are training experts' | trans }}">
+            <div class="home__nl-circles">
+                <span class="animated-circle"></span>
+                <span class="animated-circle -medium"></span>
+            </div>
+        </div>
+
+        <div class="col-10 offset-1 offset-1 col-md-8 offset-md-0">
+            <div class="home__nl js-animation" id="home-newsletter">
+                <h2 class="home__nl-title">{{ "Don't miss out" | trans }}</h2>
+                <p class="home__nl-desc">
+                    {{ 'Sign up to our newsletter to stay in the Cap4 Learning loop' | trans }}
+                </p>
+                <div id="mlb2-3523522" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-3523522">
+                    <form class="form -nl nl-row-form" action="https://static.mailerlite.com/webforms/submit/l4m8c9" data-code="l4m8c9" method="post" target="_blank">
+                        <div class="form-floating form-group ml-field-email ml-validate-email">
+                            <input type="email" id="fields[email]" name="fields[email]" required="required" placeholder=" " class="form-control">
+                            <label for="fields[email]">{{ 'Enter your e-mail address' | trans }}</label>
+                        </div>
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center mt-4">
+                            <div class="d-none">
+                                <div class="form-check justify-content-between justify-content-lg-start mb-3 mb-lg-0 w-75">
+                                    <input type="checkbox" class="form-check-input" name="checkbox_nl" id="checkbox_nl" checked required="required">
+                                    <label class="form-check-label" for="checkbox_nl">
+                                        {{ 'I agree to terms & conditions' | trans | raw }}
+                                    </label>
+                                    <input type="hidden" class="visually-hidden" name="ml-submit" value="1">
+                                </div>
+                            </div>
+
+                            <small>
+                                {{ 'Your email is only used to send you our newsletters. <br>You can use the unsubscribe link integrated in the newsletter at any time.' | trans | raw }}
+                            </small>
+                            <div class="btn-fx-wrapper -fixed mt-3 mt-lg-0">
+                                <span class="btn-fx-circle"></span>
+                                <button type="submit" class="btn btn-white">
+                                     <span class="btn-fx-inner">
+                                         {{ 'Subscribe' | trans }}
+                                     </span>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="https://track.mailerlite.com/webforms/o/3523522/l4m8c9?v1612862753" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
+                        <script src="https://static.mailerlite.com/js/w/webforms.min.js?v52c1aad546f96d894e3716ba78e7fa42" type="text/javascript"></script>
+                        <script>
+                            function ml_webform_success_3523522(){var r=ml_jQuery||jQuery;r(".nl-row-success").show(),r(".nl-row-form").hide()}
+                        </script>
+                    </form>
+                </div>
+                <div class="ml-form-successBody nl-row-success" style="display:none">
+                    <div class="ml-form-successContent">
+                        <h4>{{ 'Thank you !' | trans}}</h4>
+                        <p>{{ "You've been successfully registered to our newsletter" | trans}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

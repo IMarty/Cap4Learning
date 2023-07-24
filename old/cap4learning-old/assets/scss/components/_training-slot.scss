@@ -1,0 +1,81 @@
+.training-slot {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: .5rem;
+
+    &__date {
+        font-size: .75rem;
+        font-weight: 700;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__location {
+        width: 37.5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__lang {
+        width: 10%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__availibility {
+        color: $red;
+        width: 12.5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        span {
+            display: none;
+        }
+    }
+
+    &__location,
+    &__lang,
+    &__availibility {
+        font-size: .875rem
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        &__date {
+            font-size: 1.125rem;
+            width: 30%;
+        }
+
+        &__location {
+            width: 35%;
+        }
+
+        &__lang {
+            width: 12.5%;
+        }
+
+        &__availibility {
+            width: 22.5%;
+
+            .icon {
+                display: none;
+            }
+
+            span {
+                display: block;
+            }
+        }
+
+        &__location,
+        &__lang,
+        &__availibility {
+            font-size: 1rem;
+        }
+    }
+}

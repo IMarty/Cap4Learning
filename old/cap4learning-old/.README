@@ -1,0 +1,6 @@
+Deploy env prod:
+
+git pull
+yarn install
+yarn encore prod
+bin/console c:cl -e prod

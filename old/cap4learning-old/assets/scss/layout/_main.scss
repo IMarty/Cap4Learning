@@ -1,0 +1,22 @@
+.main {
+    padding-top: 2rem;
+    width: 100%;
+    overflow-y: hidden;
+
+    @include media-breakpoint-up(lg) {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        //margin-bottom: -12.5rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        padding-top: 6.5rem;
+
+        .js-menu-fixed & {
+            margin-top: 7.25rem;
+            padding-top: 0;
+        }
+    }
+}

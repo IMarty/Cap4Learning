@@ -1,0 +1,119 @@
+.dropdown {
+    &-menu {
+        border-radius: 0;
+        border-color: transparent;
+        border-bottom-left-radius: .75rem;
+        border-bottom-right-radius: .75rem;
+        box-shadow: $box-shadow;
+
+
+        li {
+            padding: 1px 0;
+            margin: 0 .75rem;
+
+            a {
+                display: block;
+            }
+
+            + li {
+                border-top: 1px solid $gray-400 ;
+            }
+        }
+
+        .dropdown-item {
+            color: $primary;
+            padding: .5rem;
+            width: auto;
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &:hover {
+        > .dropdown-menu {
+            display: block;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .dropdown {
+        position: relative;
+        z-index: 1005;
+
+        li a {
+            line-height: 2;
+        }
+
+        &-toggle {
+            position: relative;
+            z-index: 1010;
+            border-bottom: none;
+        }
+
+        &-menu {
+            z-index: 1001;
+            top: -2rem;
+            left: 50%;
+            border-top-left-radius: .75rem;
+            border-top-right-radius: .75rem;
+            text-align: center;
+            transform: translateX(-50%);
+            transition: $transition-base;
+            display: block;
+            width: 0;
+            height: 0;
+            padding: 0 !important;
+            opacity: 0;
+            overflow: hidden;
+
+            li {
+                opacity: 0;
+                transition: $transition-base;
+                transition-delay: .2s;
+
+                + li {
+                    border-top: 0;
+                }
+            }
+
+            &.show {
+                padding: 5rem 1rem 2.5rem !important;
+                width: auto;
+                height: auto !important;
+                min-width: 14rem;
+                transform: translateX(-50%) !important;
+                opacity: 1;
+                inset: unset !important;
+                left: 50%!important;
+                top: -1.5rem !important;
+
+                li {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:hover {
+            .dropdown-menu {
+                padding: 5rem 1rem 2.5rem !important;
+                width: auto;
+                height: auto !important;
+                min-width: 14rem;
+                transform: translateX(-50%) !important;
+                opacity: 1;
+                inset: unset !important;
+                left: 50%!important;
+                top: -1.5rem !important;
+
+                li {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+

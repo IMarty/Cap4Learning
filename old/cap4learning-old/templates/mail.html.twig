@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cap4Learning email</title>
+    <style type="text/css">
+        body[yahoo] .class {}
+        body {margin: 0; padding: 0; min-width: 100%!important;}
+        .content {width: 100%; max-width: 600px; margin: 50px auto 50px auto;}
+        .header {padding: 40px 30px 20px 30px;}
+
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, th, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        /* iOS BLUE LINKS */
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+        /* Fix Gap Under Images on Office 365 and Outlook.com */
+        div, button {display: block !important; }
+
+        body { background-color: #f9f9f9;  margin: 0; padding: 0; width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 140%; font-family: Calibri, Helvetica, sans-serif;}
+        table, td, th, p, ul, li { border: none; margin: 0; padding: 0; font-family: Helvetica, sans-serif;}
+        table { border-collapse: collapse; display: table !important;}
+        table.wrapper { width: 413px; margin: 0; text-align: left;}
+        img { border: none; margin: 0; padding: 0; display: block;}
+        sub, sup { vertical-align: baseline; position: relative; top: -.4em;}
+        sub { top: .4em;}
+        strong { font-weight: 700 !important;}
+        a, a:visited {color:#005ca9;}
+        #templateiframe .preheader { display:block !important; height:20px;}
+
+        @media screen and (max-width: 413px) {
+            /* GMAIL APP FIX */
+            .gmailfix { display: none; display: none !important; }
+
+            body { min-width: 320px !important;}
+            table.wrapper { width: 100% !important;}
+            table.mobile-no-padding td { padding-left: 0 !important; padding-right: 0 !important; }
+            .tdblock { width: 100% !important; box-sizing: border-box !important; }
+            .tdblock img { display: block !important; margin: 0 auto !important;}
+            .clearboth { display: block;}
+            td.url img { display: block !important; padding-right:10px; float:right;}
+            .img-max { width: 100% !important; }
+            .hide,
+            .tdblock img.hide { display: none !important; }
+            .tdleft {padding-right: 20px!important;}
+            .tdright {padding-left: 20px!important;}
+            .flexibleImage { width:100% !important; height:auto !important;}
+            .mobile-padding {padding-left: 15px !important; padding-right: 15px !important;}
+            .mobile-list-padding {padding-left: 30px !important;}
+            .valigntop {vertical-align: top !important;}
+            .help-icos .text3 { height: auto !important; }
+        }
+
+        @media only screen and (min-device-width: 601px) {
+            .content {width: 600px !important;}
+        }
+    </style>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+</head>
+<body yahoo bgcolor="#f6f8f1">
+<table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <table class="content" align="center" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td>
+                                    <![endif]-->
+                                    <table class="content" align="center" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td class="header" bgcolor="FFFFFF" align="center" style="text-align: center">
+                                                <img src="{{ absolute_url(asset('static/img/logo_green.png')) }}" width="170" height="43" style="margin: auto; width: 170px; height: 43px; display: inline-block">
+                                            </td>
+                                        </tr>
+
+                                        {% block body %}
+
+                                        {% endblock %}
+                                    </table>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                            </tr>
+                        </table>
+                        <![endif]-->
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<div class="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0;"><span class="gmailfix">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></div>
+</body>
+</html>

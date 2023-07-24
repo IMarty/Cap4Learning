@@ -1,0 +1,5 @@
+knp_menu:
+  #twig:
+  #  template: :menu:menu_template.html.twig
+  #templating: false
+  #default_renderer: twig
